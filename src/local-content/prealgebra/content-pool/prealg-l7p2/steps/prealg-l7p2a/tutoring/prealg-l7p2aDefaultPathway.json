@@ -1,0 +1,50 @@
+[
+  {
+    "id": "prealg-l7p2a-h1",
+    "type": "scaffold",
+    "title": "What is the coefficient telling you?",
+    "text": "$$4y$$ means $$4 \\times y$$. The inverse is division by 4, on both sides. A common mistake is to subtract 4 and answer $$y = 24$$. Which operation isolates $$y$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "MultipleChoice",
+    "answerType": "string",
+    "hintAnswer": [
+      "Divide both sides by 4"
+    ],
+    "choices": [
+      "Divide both sides by 4",
+      "Subtract 4 from both sides"
+    ]
+  },
+  {
+    "id": "prealg-l7p2a-h2",
+    "type": "scaffold",
+    "title": "Divide the right side",
+    "text": "What is $$28 \\div 4$$?",
+    "dependencies": [
+      "prealg-l7p2a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$7$$"
+    ]
+  },
+  {
+    "id": "prealg-l7p2a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$4y = 28$$. Divide both sides by 4: $$y = 7$$. Check: $$4 \\times 7 = 28$$. Common mistake: subtracting the coefficient instead of dividing by it. General rule: to undo multiplication by a nonzero number, divide both sides by that number.",
+    "dependencies": [
+      "prealg-l7p2a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

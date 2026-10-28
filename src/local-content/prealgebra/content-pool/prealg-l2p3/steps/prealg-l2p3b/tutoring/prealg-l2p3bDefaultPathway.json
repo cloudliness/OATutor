@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l2p3b-h1",
+    "type": "scaffold",
+    "title": "What is the base of the exponent?",
+    "text": "Without parentheses, the exponent binds only to the 3. The expression means 'the opposite of $$3^{2}$$,' not '$$(-3)$$ squared.' A common mistake is to treat this as identical to $$(-3)^{2}$$. What is $$3^{2}$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$9$$"
+    ]
+  },
+  {
+    "id": "prealg-l2p3b-h2",
+    "type": "scaffold",
+    "title": "Apply the leading minus",
+    "text": "The minus is applied after the exponent. What is the opposite of 9?",
+    "dependencies": [
+      "prealg-l2p3b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$-9$$"
+    ]
+  },
+  {
+    "id": "prealg-l2p3b-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$-3^{2} = -(3^{2}) = -9$$. Common mistake: squaring $$-3$$ and answering $$9$$. General rule: $$-a^{n}$$ means $$-(a^{n})$$. Use parentheses, $$(-a)^{n}$$, when the sign is part of the base.",
+    "dependencies": [
+      "prealg-l2p3b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l9p3b",
+  "stepAnswer": [
+    "$$150$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "How many minutes are in 2.5 hours?",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$150$$"
+}

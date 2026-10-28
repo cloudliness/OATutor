@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l9p2a",
+  "stepAnswer": [
+    "$$30$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "A triangle has base 10 and height 6. What is its area?",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$30$$"
+}

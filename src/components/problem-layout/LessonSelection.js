@@ -15,6 +15,13 @@ import { IS_STAGING_OR_DEVELOPMENT } from "../../util/getBuildType";
 import BuildTimeIndicator from "@components/BuildTimeIndicator";
 import withTranslation from "../../util/withTranslation.js";
 import MenuBookIcon from '@material-ui/icons/MenuBook';
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import {
+    PREALGEBRA_COURSE,
+    clearUnlock,
+    isAdvancedUnlocked,
+    isCourseUnlocked,
+} from '../../course-gate/courseAccess';
 import { LocalizationConsumer } from '../../util/LocalizationContext';
 import { withResponsive } from '../../util/ResponsiveContext';
 
@@ -32,7 +39,13 @@ class LessonSelection extends React.Component {
         this.state = {
             preparedRemoveProgress: false,
             removedProgress: false,
+            unlockVersion: 0,
         }
+    }
+
+    resetCourseUnlock = () => {
+        clearUnlock();
+        this.setState({ unlockVersion: Date.now() });
     }
       
     removeProgress = () => {
@@ -57,9 +70,25 @@ class LessonSelection extends React.Component {
         const isMobile = this.props.responsive?.isMobile ?? false;
         const selectionMode = courseNum == null ? "course" : "lesson"
 
+        const advancedUnlocked = isAdvancedUnlocked();
         if (selectionMode === "lesson" && courseNum >= this.coursePlans.length) {
             return <Box width={'100%'} textAlign={'center'} pt={4} pb={4}>
                 <Typography variant={'h3'}>Course <code>{courseNum}</code> is not valid!</Typography>
+            </Box>
+        }
+
+        if (selectionMode === "lesson" && !isCourseUnlocked(this.coursePlans[courseNum]?.courseName)) {
+            return <Box width={'100%'} textAlign={'center'} pt={4} pb={4} px={2}>
+                <LockOutlinedIcon style={{ fontSize: 48 }} />
+                <Typography variant={'h4'} style={{ marginTop: 12 }}>Pass the Algebra Check to unlock</Typography>
+                <Box mt={3}>
+                    <Button variant="contained" color="primary" onClick={() => this.props.history.push("/algebra-check")}>
+                        Take the Algebra Check
+                    </Button>
+                </Box>
+                <Box mt={2}>
+                    <Button onClick={() => this.props.history.push("/")}>Back to courses</Button>
+                </Box>
             </Box>
         }
 
@@ -95,14 +124,33 @@ class LessonSelection extends React.Component {
                             </center>
                             <Divider/>
                             <Spacer/>
+                            {selectionMode === "course" && (
+                                <Box mb={2} px={1}>
+                                    <Typography variant="body1" style={{ fontSize: 16, lineHeight: 1.5, textAlign: "center" }}>
+                                        Recommended: start with Pre-Algebra, then Elementary Algebra.
+                                        {" "}
+                                        {advancedUnlocked
+                                            ? "Advanced courses are unlocked on this browser."
+                                            : "Other courses stay locked until you pass the Algebra Check at 80%, or master every Elementary Algebra lesson."}
+                                    </Typography>
+                                    {!advancedUnlocked && (
+                                        <Box mt={1} display="flex" justifyContent="center">
+                                            <Button variant="contained" color="primary" onClick={() => this.props.history.push("/algebra-check")}>
+                                                Algebra Check
+                                            </Button>
+                                        </Box>
+                                    )}
+                                </Box>
+                            )}
                             <Grid container spacing={3}>
                                 {selectionMode === "course"
                                     ? this.coursePlans
-                                        .map((course, i) =>
+                                        .map((course, i) => {
+                                            const unlocked = isCourseUnlocked(course.courseName);
+                                            return (
                                             <Grid item xs={12} sm={6} md={4} key={course.courseName}>
                                                 <center>
-                                                    {/* card, text, and icon scale in proportion to one another */}
-                                                    <Paper className={classes.paper} style={{ fontSize: "1rem", textAlign: "center" }}>
+                                                    <Paper className={classes.paper} style={{ fontSize: "1rem", textAlign: "center", paddingBottom: 12 }}>
                                                         <h2 style={{
                                                             minHeight: "2.5em",
                                                             marginTop: "0.2em",
@@ -113,8 +161,13 @@ class LessonSelection extends React.Component {
                                                             justifyContent: "center",
                                                             wordBreak: "break-word",
                                                         }}>{course.courseName}</h2>
-                                                        <IconButton aria-label={`View Course ${i}`}
-                                                            aria-roledescription={`Navigate to course ${i}'s page to view available lessons`}
+                                                        {course.courseName === PREALGEBRA_COURSE && (
+                                                            <Typography variant="body2" style={{ color: "#1f4b6e", fontWeight: 600, marginBottom: 8 }}>
+                                                                Recommended: start with Pre-Algebra
+                                                            </Typography>
+                                                        )}
+                                                        {unlocked ? (
+                                                        <IconButton aria-label={`View Course ${course.courseName}`}
                                                             role={"link"}
                                                             onClick={() => {
                                                                 this.props.selectCourse(course);
@@ -122,15 +175,23 @@ class LessonSelection extends React.Component {
                                                             }}>
                                                             <img
                                                                 src={`${process.env.PUBLIC_URL}/static/images/icons/folder_outline_2.svg`}
-                                                                // width="56px"
-                                                                alt="folderIcon"
+                                                                alt=""
                                                                 style= {{ width: "2.6em" }}
                                                             />
                                                         </IconButton>
+                                                        ) : (
+                                                            <div>
+                                                                <LockOutlinedIcon aria-hidden="true" style={{ fontSize: 36, color: "#5c6b7a" }} />
+                                                                <Typography variant="body2" style={{ marginTop: 8, padding: "0 8px" }}>
+                                                                    Pass the Algebra Check to unlock
+                                                                </Typography>
+                                                            </div>
+                                                        )}
                                                     </Paper>
                                                 </center>
                                             </Grid>
-                                        )
+                                            );
+                                        })
                                     : (() => {
                                         const course = this.coursePlans[this.props.courseNum];
                                         const metaLessons = Array.isArray(course.metaLessons) ? course.metaLessons : [];
@@ -280,7 +341,7 @@ class LessonSelection extends React.Component {
                     <Spacer/>
                     <Grid container spacing={0}>
                         <Grid item xs={3} sm={3} md={5} key={1}/>
-                        {!this.isPrivileged && <Grid item xs={6} sm={6} md={2} key={2}>
+                        {!this.isPrivileged && <Grid item xs={12} sm={8} md={4} key={2}>
                             {this.state.preparedRemoveProgress ?
                                 <Button className={classes.button} size="small"
                                         style={{ 
@@ -302,6 +363,20 @@ class LessonSelection extends React.Component {
                                     }} 
                                     onClick={this.prepareRemoveProgress}
                                     disabled={this.state.preparedRemoveProgress}>{translate('lessonSelection.resetprogress')}</Button>}
+                            <Button className={classes.button} size="small"
+                                style={{
+                                    width: "100%",
+                                    marginTop: 8,
+                                    color: "#3F7091",
+                                    backgroundColor: "transparent",
+                                    border: "1px solid #4F86A8",
+                                    boxShadow: "none"
+                                }}
+                                onClick={this.resetCourseUnlock}
+                                disabled={!advancedUnlocked}
+                            >
+                                Reset course unlock
+                            </Button>
                         </Grid>}
                         <Grid item xs={3} sm={3} md={4} key={3}/>
                     </Grid>

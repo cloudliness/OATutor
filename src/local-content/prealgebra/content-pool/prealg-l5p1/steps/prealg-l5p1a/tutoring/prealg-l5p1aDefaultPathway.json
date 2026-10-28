@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l5p1a-h1",
+    "type": "scaffold",
+    "title": "Rewrite the percent as a decimal or a fraction",
+    "text": "$$25\\%$$ means 25 per 100, which simplifies to $$\\frac{1}{4}$$. 'Of' means multiply. A common mistake is to add 25 to 80, or to multiply by 25 instead of by $$\\frac{1}{4}$$. What is the denominator of $$25\\%$$ written as a fraction in lowest terms?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$4$$"
+    ]
+  },
+  {
+    "id": "prealg-l5p1a-h2",
+    "type": "scaffold",
+    "title": "Take one fourth of 80",
+    "text": "Dividing by 4 is the same as multiplying by $$\\frac{1}{4}$$. What is $$80 \\div 4$$?",
+    "dependencies": [
+      "prealg-l5p1a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$20$$"
+    ]
+  },
+  {
+    "id": "prealg-l5p1a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$25\\%$$ of $$80 = 0.25 \\times 80 = 20$$. Common mistake: answering $$25$$, or $$105$$ from adding. General rule: to find $$p\\%$$ of a number, convert $$p\\%$$ to $$\\frac{p}{100}$$ or to a decimal, then multiply.",
+    "dependencies": [
+      "prealg-l5p1a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

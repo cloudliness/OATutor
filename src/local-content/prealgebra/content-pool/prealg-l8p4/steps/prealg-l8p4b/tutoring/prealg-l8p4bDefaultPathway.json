@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l8p4b-h1",
+    "type": "scaffold",
+    "title": "Split the root over the fraction",
+    "text": "$$\\sqrt{\\frac{9}{25}} = \\frac{\\sqrt{9}}{\\sqrt{25}}$$ when both parts are nonnegative, which they are. A common mistake is to take the root of only the numerator. What is $$\\sqrt{9}$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$3$$"
+    ]
+  },
+  {
+    "id": "prealg-l8p4b-h2",
+    "type": "scaffold",
+    "title": "Root of the denominator",
+    "text": "What is $$\\sqrt{25}$$?",
+    "dependencies": [
+      "prealg-l8p4b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$5$$"
+    ]
+  },
+  {
+    "id": "prealg-l8p4b-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$\\sqrt{\\frac{9}{25}} = \\frac{3}{5}$$. Check: $$\\left(\\frac{3}{5}\\right)^{2} = \\frac{9}{25}$$. Common mistake: answering $$\\frac{9}{5}$$ or $$\\frac{\\sqrt{9}}{25}$$. General rule: the square root of a fraction is the square root of the numerator over the square root of the denominator.",
+    "dependencies": [
+      "prealg-l8p4b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l8p2b-h1",
+    "type": "scaffold",
+    "title": "Work inside the parentheses",
+    "text": "A power of a power can be done inside-out. $$2^{3} = 8$$, and then that result is squared. A common mistake is to multiply the exponents and then multiply by the base, or to add the exponents to get $$2^{5}$$. What is $$2^{3}$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$8$$"
+    ]
+  },
+  {
+    "id": "prealg-l8p2b-h2",
+    "type": "scaffold",
+    "title": "Square that result",
+    "text": "What is $$8^{2}$$?",
+    "dependencies": [
+      "prealg-l8p2b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$64$$"
+    ]
+  },
+  {
+    "id": "prealg-l8p2b-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$(2^{3})^{2} = 8^{2} = 64$$. Multiplying the exponents gives the same result: $$2^{3 \\times 2} = 2^{6} = 64$$. Common mistake: $$2^{3 + 2} = 2^{5} = 32$$, which would be $$2^{3} \\times 2^{2}$$, a product of powers, not a power of a power. General rule: $$(a^{m})^{n} = a^{m \\times n}$$, while $$a^{m} \\times a^{n} = a^{m + n}$$.",
+    "dependencies": [
+      "prealg-l8p2b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

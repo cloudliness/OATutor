@@ -1,0 +1,51 @@
+[
+  {
+    "id": "prealg-l3p4a-h1",
+    "type": "scaffold",
+    "title": "Convert the mixed number first",
+    "text": "A mixed number has to become an improper fraction before you multiply. $$1\\frac{1}{2}$$ means $$1 + \\frac{1}{2} = \\frac{2}{2} + \\frac{1}{2}$$. A common mistake is to multiply only the fraction part $$\\frac{1}{2}$$ by $$\\frac{2}{3}$$ and drop the 1. Which improper fraction equals $$1\\frac{1}{2}$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "MultipleChoice",
+    "answerType": "string",
+    "hintAnswer": [
+      "$$\\frac{3}{2}$$"
+    ],
+    "choices": [
+      "$$\\frac{3}{2}$$",
+      "$$\\frac{2}{3}$$",
+      "$$\\frac{1}{2}$$"
+    ]
+  },
+  {
+    "id": "prealg-l3p4a-h2",
+    "type": "scaffold",
+    "title": "What is left in the denominator?",
+    "text": "After canceling, both the numerator and the denominator are 1. A product of $$\\frac{1}{1}$$ equals which whole number?",
+    "dependencies": [
+      "prealg-l3p4a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$1$$"
+    ]
+  },
+  {
+    "id": "prealg-l3p4a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$1\\frac{1}{2} \\times \\frac{2}{3} = \\frac{3}{2} \\times \\frac{2}{3} = 1$$. Common mistake: multiplying only the fraction parts, $$\\frac{1}{2} \\times \\frac{2}{3} = \\frac{1}{3}$$, and ignoring the 1. General rule: convert a mixed number to an improper fraction before multiplying, then cancel common factors and multiply what remains.",
+    "dependencies": [
+      "prealg-l3p4a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

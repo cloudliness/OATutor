@@ -1,10 +1,13 @@
 import React from "react";
-import courses from "../content-sources/oatutor/coursePlans.json";
+import contentCourses from "../content-sources/oatutor/coursePlans.json";
+import prealgebraCourse from "../local-content/prealgebra/coursePlan.json";
 import { calculateSemester } from "../util/calculateSemester.js";
 
 import { SITE_NAME } from "@common/global-config";
 import { cleanObjectKeys } from "../util/cleanObject";
 import { buildOfficeHoursLesson, courseHasOfficeHours } from "../util/officeHours.js";
+
+const courses = [prealgebraCourse, ...contentCourses];
 
 const ThemeContext = React.createContext(0);
 const SITE_VERSION = "2.0";
@@ -40,20 +43,20 @@ const SHOW_COPYRIGHT = false;
  * feedback, user interactions, and site logs.
  * @type {boolean}
  */
-const ENABLE_FIREBASE = true;
+const ENABLE_FIREBASE = false;
 
 /**
  * If ENABLE_FIREBASE, indicates whether the site should use Firebase to store, process, and analyze general user
  * interactions.
  * @type {boolean}
  */
-const DO_LOG_DATA = true;
+const DO_LOG_DATA = false;
 
 /**
  * Indicates whether a log event should be fired everytime a user leaves or returns to this window.
  * @type {boolean}
  */
-const DO_FOCUS_TRACKING = true;
+const DO_FOCUS_TRACKING = false;
 
 /**
  * If DO_LOG_DATA is enabled, indicates whether the site should also track user mouse interactions with the site. See

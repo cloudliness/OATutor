@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l4p3a-h1",
+    "type": "scaffold",
+    "title": "How do you clear the decimal in the divisor?",
+    "text": "$$0.3$$ has one decimal place. Multiply the divisor and the dividend by 10, which moves both decimal points one place to the right. A common mistake is to move the point in only one of the numbers. $$0.3 \\times 10 = 3$$. What is $$3.6 \\times 10$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$36$$"
+    ]
+  },
+  {
+    "id": "prealg-l4p3a-h2",
+    "type": "scaffold",
+    "title": "Divide the whole numbers",
+    "text": "The problem is now $$36 \\div 3$$. What is that quotient?",
+    "dependencies": [
+      "prealg-l4p3a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$12$$"
+    ]
+  },
+  {
+    "id": "prealg-l4p3a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$3.6 \\div 0.3 = 36 \\div 3 = 12$$. Check: $$0.3 \\times 12 = 3.6$$. Common mistake: answering $$1.2$$ by dividing 3.6 by 3 without moving the dividend's decimal point. General rule: multiply the divisor and the dividend by the same power of 10 so the divisor is a whole number, then divide.",
+    "dependencies": [
+      "prealg-l4p3a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

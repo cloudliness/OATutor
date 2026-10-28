@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l6p2a-h1",
+    "type": "scaffold",
+    "title": "Find the price of one ticket",
+    "text": "The unit price is the cost divided by the number of tickets. A common mistake is to add $$28 + 7$$ or to multiply 28 by 7. What is $$28 \\div 4$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$7$$"
+    ]
+  },
+  {
+    "id": "prealg-l6p2a-h2",
+    "type": "scaffold",
+    "title": "Scale up to 7 tickets",
+    "text": "Each ticket costs $$\\$7$$. What is $$7 \\times 7$$?",
+    "dependencies": [
+      "prealg-l6p2a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$49$$"
+    ]
+  },
+  {
+    "id": "prealg-l6p2a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "One ticket costs $$28 \\div 4 = 7$$ dollars, so 7 tickets cost $$7 \\times 7 = 49$$ dollars. Common mistake: answering $$28 \\times \\frac{4}{7}$$, which scales in the wrong direction. General rule: divide to find the unit rate, then multiply by the new count.",
+    "dependencies": [
+      "prealg-l6p2a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

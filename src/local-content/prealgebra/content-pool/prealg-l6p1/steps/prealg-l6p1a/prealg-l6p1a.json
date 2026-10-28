@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l6p1a",
+  "stepAnswer": [
+    "$$\\frac{3}{4}$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "Write the ratio 18 to 24 as a fraction in lowest terms.",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$\\frac{3}{4}$$"
+}

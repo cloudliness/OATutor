@@ -17,74 +17,39 @@ if (+process.versions.node.split(".")[0] < 10) {
 
 // the current file should be in src/tools so ../content-sources/* should be src/content-sources/*
 const problemPoolPath = path.join(__dirname, '..', 'content-sources', CONTENT_SOURCE, 'content-pool')
+const localPoolPath = path.join(__dirname, '..', 'local-content', 'prealgebra', 'content-pool')
 const generatedPath = path.join(__dirname, '..', '..', 'generated', 'processed-content-pool')
 const poolFilePath = path.join(generatedPath, `${CONTENT_SOURCE}.json`)
+const publicContentDir = path.join(__dirname, '..', '..', 'public', 'static', 'content')
+const publicPoolPath = path.join(publicContentDir, `${CONTENT_SOURCE}.json`)
 const staticFiguresPath = path.join(__dirname, '..', '..', 'public', 'static', 'images', 'figures', CONTENT_SOURCE)
 
-;(async () => {
-    // let hasPrevPool = true, config = {};
-    // await access(poolFilePath).catch(err => {
-    //   hasPrevPool = false
-    // })
-    //
-    // if (hasPrevPool) {
-    //   await readFile(poolFilePath, "utf8").then(data => {
-    //     config = JSON.parse(data.toString())
-    //   }).catch(err => {
-    //     console.debug('error reading pool file: ', err)
-    //     hasPrevPool = false
-    //   })
-    // }
-    //
-    // console.debug('has previous pool file? ', hasPrevPool)
-    // const { meta = {}, pool = [] } = config
-    // if (hasPrevPool && (!meta || !pool || !meta.timestamp)) {
-    //   console.debug('previous pool file is invalid, regenerating pool file...')
-    // }
-    //
-    // const { updatedTime = -1 } = meta
-    // if (hasPrevPool && updatedTime > -1) {
-    //   console.debug(`last update time was ${new Date(updatedTime)}`)
-    // }
-
-    const updatedTime = -1; // optimizing file reads based on last updated time makes negligible difference right now.
-    // let modifiedProblems = 0
-    const directoryItems = await readdir(problemPoolPath)
+async function readPool(poolPath) {
+    const updatedTime = -1;
+    const directoryItems = await readdir(poolPath)
     const problemDirs = await Promise.all(directoryItems.map(async item => {
-        const stat = await lstat(path.join(problemPoolPath, item))
+        const stat = await lstat(path.join(poolPath, item))
         let directory = ""
         if (stat.isDirectory()) {
-            if (fs.lstatSync(path.join(problemPoolPath, item)).mtime > updatedTime) {
-                // modifiedProblems++
+            if (fs.lstatSync(path.join(poolPath, item)).mtime > updatedTime) {
                 directory = item
             }
         }
-        return new Promise((resolve, reject) => {
-            resolve(directory)
-        })
+        return directory
     })).catch(err => {
         console.debug(err)
         console.error('error reading problem directories')
         process.exit(1)
     })
 
-    // remove existing static figures
-    await rm(staticFiguresPath, { recursive: true }).catch(err => {
-        console.debug(err)
-        console.error('error removing existing figures (this is ok on the first run)')
-        if (err.code !== 'ENOENT') {
-            process.exit(1)
-        }
-    })
-
     const problems = await Promise.all(
         problemDirs
-            .filter(d => d.length > 0) // only keep resolved directories
-            .filter(d => !(d.toString().startsWith("_") || d.toString().startsWith("."))) // ignore directories that start with _ or .
+            .filter(d => d.length > 0)
+            .filter(d => !(d.toString().startsWith("_") || d.toString().startsWith(".")))
             .map(
                 async problemDir => {
                     const problemName = problemDir.toString()
-                    const problemPath = path.join(problemPoolPath, problemName)
+                    const problemPath = path.join(poolPath, problemName)
 
                     const problem = require(path.join(problemPath, `${problemName}.json`))
 
@@ -93,20 +58,13 @@ const staticFiguresPath = path.join(__dirname, '..', '..', 'public', 'static', '
                         throw Error(`${problemName.toString()} has no steps.`)
                     }
 
-                    const figurePaths = await readdir(path.join(problemPath, 'figures')).catch(err => {
-                        // ignore, see below
-                    })
-                    if (!figurePaths || figurePaths.length === 0) {
-                        // it is okay if a problem doesn't have figures
-                    } else {
+                    const figurePaths = await readdir(path.join(problemPath, 'figures')).catch(() => {})
+                    if (figurePaths && figurePaths.length > 0) {
                         await Promise.all(figurePaths.map(async figure => {
                             await mkdir(path.join(staticFiguresPath, problemDir.toString()), {
                                 recursive: true
                             })
                             await copyFile(path.join(problemPath, 'figures', figure), path.join(staticFiguresPath, problemDir.toString(), figure))
-                            return new Promise((resolve, reject) => {
-                                resolve(true)
-                            })
                         }))
                     }
 
@@ -118,7 +76,7 @@ const staticFiguresPath = path.join(__dirname, '..', '..', 'public', 'static', '
 
                                 const step = require(path.join(stepPath, `${stepDir}.json`))
 
-                                const hintPathwaysDir = await readdir(path.join(stepPath, 'tutoring')) || []
+                                const hintPathwaysDir = await readdir(path.join(stepPath, 'tutoring')).catch(() => []) || []
                                 if (hintPathwaysDir.length === 0) {
                                     console.warn(`${problemName} -> ${stepName} has no hints (pathways).`)
                                 }
@@ -135,22 +93,14 @@ const staticFiguresPath = path.join(__dirname, '..', '..', 'public', 'static', '
                                                 ? hintPathwayFullName.substr(hintPathwayFullName.indexOf(stepName) + stepName.length).replace(/\.[^/.]+$/, "")
                                                 : hintPathwayFullName
 
-                                            return new Promise((resolve, reject) => {
-                                                resolve({ [hintPathwayName]: hintPathway })
-                                            })
+                                            return { [hintPathwayName]: hintPathway }
                                         }))
 
-                                // merge down into one object
                                 step.hints = Object.fromEntries(hintPathways.map(obj => [Object.keys(obj)[0], obj[Object.keys(obj)[0]]]))
-
-                                return new Promise((resolve, reject) => {
-                                    resolve(step)
-                                })
+                                return step
                             }))
 
-                    return new Promise((resolve, reject) => {
-                        resolve(problem)
-                    })
+                    return problem
                 })
     ).catch(err => {
         console.debug(err)
@@ -158,15 +108,26 @@ const staticFiguresPath = path.join(__dirname, '..', '..', 'public', 'static', '
         process.exit(1)
     })
 
-    // console.debug(`${modifiedProblems} problems have been modified.`)
+    return problems
+}
 
-    console.debug(`writing to pool file...`)
 
-    const config = problems
-
-    await mkdir(generatedPath, {
-        recursive: true
+;(async () => {
+    await rm(staticFiguresPath, { recursive: true }).catch(err => {
+        if (err && err.code !== 'ENOENT') {
+            console.error('error removing existing figures')
+            process.exit(1)
+        }
     })
 
-    await writeFile(poolFilePath, JSON.stringify(config))
+    const mainProblems = await readPool(problemPoolPath)
+    const localProblems = fs.existsSync(localPoolPath) ? await readPool(localPoolPath) : []
+    const config = mainProblems.concat(localProblems)
+    console.log(`writing pool: ${mainProblems.length} content problems + ${localProblems.length} local problems`)
+
+    await mkdir(generatedPath, { recursive: true })
+    await mkdir(publicContentDir, { recursive: true })
+    const payload = JSON.stringify(config)
+    await writeFile(poolFilePath, payload)
+    await writeFile(publicPoolPath, payload)
 })()

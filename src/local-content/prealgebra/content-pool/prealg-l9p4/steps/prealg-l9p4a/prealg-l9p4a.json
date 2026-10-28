@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l9p4a",
+  "stepAnswer": [
+    "$$84$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "A rectangular garden is 12 feet by 7 feet. What is its area in square feet?",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$84$$"
+}

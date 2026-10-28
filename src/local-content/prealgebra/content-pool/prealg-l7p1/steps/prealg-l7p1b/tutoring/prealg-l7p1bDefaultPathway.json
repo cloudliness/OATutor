@@ -1,0 +1,50 @@
+[
+  {
+    "id": "prealg-l7p1b-h1",
+    "type": "scaffold",
+    "title": "What undoes subtracting 7?",
+    "text": "Subtracting 7 is undone by adding 7 to both sides, including the negative right side. A common mistake is to subtract 7 again and move further negative. Which operation undoes $$n - 7$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "MultipleChoice",
+    "answerType": "string",
+    "hintAnswer": [
+      "Add 7 to both sides"
+    ],
+    "choices": [
+      "Add 7 to both sides",
+      "Subtract 7 from both sides"
+    ]
+  },
+  {
+    "id": "prealg-l7p1b-h2",
+    "type": "scaffold",
+    "title": "Add 7 to the right side",
+    "text": "What is $$-3 + 7$$?",
+    "dependencies": [
+      "prealg-l7p1b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$4$$"
+    ]
+  },
+  {
+    "id": "prealg-l7p1b-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$n - 7 = -3$$. Add 7 to both sides: $$n = 4$$. Check: $$4 - 7 = -3$$. Common mistake: $$n = -3 - 7 = -10$$. General rule: undo subtraction by adding the same number to both sides.",
+    "dependencies": [
+      "prealg-l7p1b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l3p3a-h1",
+    "type": "scaffold",
+    "title": "What denominator fits both?",
+    "text": "The denominators are 6 and 4. Their least common multiple is 12, same as in an addition problem. Subtraction uses the same preparation. A common mistake is to subtract the denominators. How many twelfths is $$\\frac{5}{6}$$? That is, what numerator do you get when you multiply 5 by $$12 \\div 6$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$10$$"
+    ]
+  },
+  {
+    "id": "prealg-l3p3a-h2",
+    "type": "scaffold",
+    "title": "Rewrite the fraction you subtract",
+    "text": "$$\\frac{1}{4} = \\frac{3}{12}$$. You will subtract those 3 twelfths from 10 twelfths. What is $$10 - 3$$?",
+    "dependencies": [
+      "prealg-l3p3a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$7$$"
+    ]
+  },
+  {
+    "id": "prealg-l3p3a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$\\frac{5}{6} - \\frac{1}{4} = \\frac{10}{12} - \\frac{3}{12} = \\frac{7}{12}$$. Common mistake: $$\\frac{5 - 1}{6 - 4} = \\frac{4}{2}$$, which is a different number. General rule: use a common denominator, then subtract numerators and keep the denominator.",
+    "dependencies": [
+      "prealg-l3p3a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

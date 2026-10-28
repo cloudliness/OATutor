@@ -32,7 +32,6 @@ import { getStudentDisplayName } from "../util/getStudentDisplayName";
 import BrandLogoNav from "@components/BrandLogoNav";
 import { cleanArray } from "../util/cleanObject";
 import ErrorBoundary from "@components/ErrorBoundary";
-import { CONTENT_SOURCE } from "@common/global-config";
 import withTranslation from "../util/withTranslation";
 
 import { LocalizationConsumer } from "../util/LocalizationContext.js";
@@ -66,8 +65,12 @@ import withWidth from "@material-ui/core/withWidth";
 import { ProgressTooltip, InfoTooltip } from "@components/Tooltip";
 import { isMobileWidth } from "../util/responsive";
 import { isFullChatLesson } from "../util/officeHours.js";
-
-let problemPool = require(`@generated/processed-content-pool/${CONTENT_SOURCE}.json`);
+import { loadProblemPool } from "../content/loadProblemPool";
+import {
+  courseNameForLesson,
+  isCourseUnlocked,
+  maybeUnlockByElementaryMastery,
+} from "../course-gate/courseAccess";
 
 let seed = Date.now().toString();
 console.log("Generated seed");
@@ -100,7 +103,7 @@ class Platform extends React.Component {
     super(props);
 
     this.problemIndex = {
-      problems: problemPool,
+      problems: [],
     };
     this.completedProbs = new Set();
     this.lesson = null;
@@ -135,13 +138,6 @@ class Platform extends React.Component {
     this.togglePopup = this.togglePopup.bind(this);
     this.toggleFeedback = this.toggleFeedback.bind(this);
 
-    for (const problem of this.problemIndex.problems) {
-      for (let stepIndex = 0; stepIndex < problem.steps.length; stepIndex++) {
-        const step = problem.steps[stepIndex];
-        step.knowledgeComponents = cleanArray(context.skillModel[step.id] || []);
-      }
-    }
-
     this.selectLesson = this.selectLesson.bind(this);
 
     this.state = {
@@ -151,10 +147,27 @@ class Platform extends React.Component {
       drawerOpen: initialDrawerOpen,
       metaCollapsed: false,
       currProblem: null,
-      status: this.props.lessonID ? "loading" : "courseSelection",
+      status: "loading",
+      contentError: "",
       seed: seed,
     }
   }
+
+  _indexProblems = (pool) => {
+    this.problemIndex.problems = pool;
+    const skillModel = this.context?.skillModel || {};
+    for (const problem of pool) {
+      for (let stepIndex = 0; stepIndex < problem.steps.length; stepIndex++) {
+        const step = problem.steps[stepIndex];
+        step.knowledgeComponents = cleanArray(skillModel[step.id] || []);
+      }
+    }
+  };
+
+  _lessonIsLocked = (lesson) => {
+    const courseName = courseNameForLesson(coursePlans, lesson);
+    return Boolean(courseName) && !isCourseUnlocked(courseName);
+  };
 
 
 
@@ -175,14 +188,41 @@ class Platform extends React.Component {
       return null;
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     this._isMounted = true;
+    try {
+      const pool = await loadProblemPool();
+      if (!this._isMounted) return;
+      this._indexProblems(pool);
+    } catch (err) {
+      if (!this._isMounted) return;
+      this.setState({
+        status: "contentError",
+        contentError: err?.message || "Could not load course content.",
+      });
+      return;
+    }
+    if (this.props.loadBktProgress) {
+      await this.props.loadBktProgress();
+    }
+    if (!this._isMounted) return;
+    if (maybeUnlockByElementaryMastery(coursePlans, this.context?.bktParams)) {
+      this.setState({ unlockVersion: Date.now() });
+    }
     if (this.props.lessonID != null) {
       const lesson = findLessonById(this.props.lessonID) || findMetaLessonById(this.props.lessonID);
+      if (this._lessonIsLocked(lesson)) {
+        toast.info("Pass the Algebra Check to unlock");
+        this.props.history.push("/");
+        this.setState({ status: "courseSelection" });
+        return;
+      }
       this.selectLesson(lesson).then((_) => {});
       this.props.enterCourse?.(lesson?.courseName, this._resolveLessonLanguage(lesson));
     } else if (this.props.courseNum != null) {
-      this.selectCourse(coursePlans[parseInt(this.props.courseNum)]);
+      this.selectCourse(coursePlans[parseInt(this.props.courseNum, 10)]);
+    } else {
+      this.setState({ status: "courseSelection" });
     }
     this.onComponentUpdate(null, null, null);
   }
@@ -360,6 +400,12 @@ class Platform extends React.Component {
   }
 
   async selectLesson(lesson, updateServer = true) {
+    if (this._lessonIsLocked(lesson)) {
+      toast.info("Pass the Algebra Check to unlock");
+      this.props.history.push("/");
+      this.setState({ status: "courseSelection", currProblem: null });
+      return;
+    }
     if (lesson && lesson.type === "meta_lesson") {
       if (this.isPrivileged && updateServer) {
         if (!this._isMounted) {
@@ -1141,6 +1187,16 @@ class Platform extends React.Component {
   };
 
   render() {
+    if (this.state.status === "loading" || this.state.status === "contentError") {
+      return (
+        <div style={{ minHeight: "100vh", background: "#F6F6F6", padding: 24, textAlign: "center" }}>
+          <h1 style={{ fontWeight: 500, fontSize: 28 }}>
+            {this.state.status === "loading" ? "Loading courses…" : "Could not load course content"}
+          </h1>
+          {this.state.contentError ? <p>{this.state.contentError}</p> : null}
+        </div>
+      );
+    }
     const { translate, width } = this.props;
     const { showPopup } = this.state;
     const { classes } = this.props;

@@ -11,6 +11,12 @@ export async function fetchDynamicHint(
     variabilization, 
     context
     ) {
+    if (!DYNAMIC_HINT_URL) {
+        if (onError) {
+            onError(new Error("Dynamic hints are off in this standalone copy."));
+        }
+        return;
+    }
     try {
         AWS.config.update({
             accessKeyId: process.env.AWS_ACCESS_KEY,

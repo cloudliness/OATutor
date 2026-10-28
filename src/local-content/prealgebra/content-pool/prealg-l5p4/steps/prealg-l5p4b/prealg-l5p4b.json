@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l5p4b",
+  "stepAnswer": [
+    "$$55$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "Increase 50 by $$10\\%$$.",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$55$$"
+}

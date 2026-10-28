@@ -1,0 +1,63 @@
+[
+  {
+    "id": "prealg-l3p1a-h1",
+    "type": "scaffold",
+    "title": "What do you divide by?",
+    "text": "Simplifying a fraction means dividing the numerator and the denominator by the same number. That number has to be a common factor. A common mistake is to subtract the same amount from the top and the bottom, which changes the value. What is the greatest whole number that divides both 18 and 24?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$6$$"
+    ]
+  },
+  {
+    "id": "prealg-l3p1a-h2",
+    "type": "scaffold",
+    "title": "Divide the numerator",
+    "text": "The greatest common factor is 6, because $$18 = 6 \\times 3$$ and $$24 = 6 \\times 4$$. Divide the numerator by that factor. What is $$18 \\div 6$$?",
+    "dependencies": [
+      "prealg-l3p1a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$3$$"
+    ]
+  },
+  {
+    "id": "prealg-l3p1a-h3",
+    "type": "scaffold",
+    "title": "Divide the denominator",
+    "text": "Divide the denominator by the same factor, or the value changes. What is $$24 \\div 6$$?",
+    "dependencies": [
+      "prealg-l3p1a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$4$$"
+    ]
+  },
+  {
+    "id": "prealg-l3p1a-h4",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$\\frac{18}{24} = \\frac{18 \\div 6}{24 \\div 6} = \\frac{3}{4}$$. Common mistake: dividing the top by 6 and the bottom by something else, or subtracting 6 from both. General rule: divide the numerator and the denominator by their greatest common factor. The fraction keeps the same value because you divided by $$\\frac{6}{6} = 1$$.",
+    "dependencies": [
+      "prealg-l3p1a-h3"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

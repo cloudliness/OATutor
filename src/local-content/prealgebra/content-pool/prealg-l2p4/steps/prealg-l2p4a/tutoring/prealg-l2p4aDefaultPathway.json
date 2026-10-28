@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l2p4a-h1",
+    "type": "scaffold",
+    "title": "Which direction wins?",
+    "text": "$$7 - 18$$ means start at 7 and move 18 units left. You pass 0, so the result is negative. A common mistake is to answer $$11$$, the distance, and drop the sign. How far is 18 from 7? That is, what is $$18 - 7$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$11$$"
+    ]
+  },
+  {
+    "id": "prealg-l2p4a-h2",
+    "type": "scaffold",
+    "title": "Attach the sign",
+    "text": "The larger absolute value belongs to the negative term in $$7 + (-18)$$, so take the opposite of the distance 11. What signed number has absolute value 11 and is negative?",
+    "dependencies": [
+      "prealg-l2p4a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$-11$$"
+    ]
+  },
+  {
+    "id": "prealg-l2p4a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$7 - 18 = -11$$. Common mistake: answering $$11$$. General rule: if you subtract a larger positive from a smaller positive, the result is negative, and the size of the result is the difference of the absolute values.",
+    "dependencies": [
+      "prealg-l2p4a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

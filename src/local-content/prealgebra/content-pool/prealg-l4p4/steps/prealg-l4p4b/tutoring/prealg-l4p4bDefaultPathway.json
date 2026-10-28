@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l4p4b-h1",
+    "type": "scaffold",
+    "title": "How many places does 100 move the point?",
+    "text": "100 has two zeros, so multiplying by 100 moves the decimal point two places to the right. A common mistake is to move it one place, or to move it left as if you were dividing. How many places does the decimal point move?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$2$$"
+    ]
+  },
+  {
+    "id": "prealg-l4p4b-h2",
+    "type": "scaffold",
+    "title": "Move the point in 0.08",
+    "text": "Start at $$0.08$$ and move the decimal point two places right. The digits 0 and 8 become a whole number. What whole number do you land on?",
+    "dependencies": [
+      "prealg-l4p4b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$8$$"
+    ]
+  },
+  {
+    "id": "prealg-l4p4b-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$0.08 \\times 100 = 8$$. The point jumps over both digits. Common mistake: answering $$0.8$$ or $$800$$. General rule: multiplying by $$10^{n}$$ moves the decimal point $$n$$ places to the right. Dividing by $$10^{n}$$ moves it $$n$$ places to the left.",
+    "dependencies": [
+      "prealg-l4p4b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

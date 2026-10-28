@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l3p2a-h1",
+    "type": "scaffold",
+    "title": "What is the reciprocal of the divisor?",
+    "text": "Dividing by a fraction is multiplying by its reciprocal: flip the second fraction, then multiply. The reciprocal of $$\\frac{2}{5}$$ is $$\\frac{5}{2}$$. A common mistake is to flip the first fraction, or to divide the numerators and denominators separately. After rewriting, the problem is $$\\frac{3}{4} \\times \\frac{5}{2}$$. What is the numerator of that product, before simplifying?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$15$$"
+    ]
+  },
+  {
+    "id": "prealg-l3p2a-h2",
+    "type": "scaffold",
+    "title": "Denominator of the product",
+    "text": "What is $$4 \\times 2$$, the denominator before simplifying?",
+    "dependencies": [
+      "prealg-l3p2a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$8$$"
+    ]
+  },
+  {
+    "id": "prealg-l3p2a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$\\frac{3}{4} \\div \\frac{2}{5} = \\frac{3}{4} \\times \\frac{5}{2} = \\frac{15}{8}$$. $$\\frac{15}{8}$$ is already in lowest terms. Common mistake: flipping $$\\frac{3}{4}$$ instead of $$\\frac{2}{5}$$, or answering $$\\frac{3}{4} \\times \\frac{2}{5}$$. General rule: keep the first fraction, flip the second, and change division to multiplication.",
+    "dependencies": [
+      "prealg-l3p2a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "id": "prealg-l8p2",
+  "title": "A zero exponent, and a power of a power",
+  "body": "$$a^{0} = 1$$ for $$a \\neq 0$$, because $$a^{n} / a^{n} = a^{0}$$ and any nonzero number divided by itself is 1.",
+  "variabilization": {},
+  "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+  "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+  "lesson": "8. Exponents and Square Roots",
+  "lessonId": "prealg-lesson-8",
+  "courseName": "Pre-Algebra"
+}

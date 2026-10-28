@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l9p3a",
+  "stepAnswer": [
+    "$$36$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "How many inches are in 3 feet?",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$36$$"
+}

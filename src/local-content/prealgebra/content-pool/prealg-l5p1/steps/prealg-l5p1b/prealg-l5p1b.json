@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l5p1b",
+  "stepAnswer": [
+    "$$60$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "Write $$\\frac{3}{5}$$ as a percent.",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$60$$"
+}

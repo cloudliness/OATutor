@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l9p2b-h1",
+    "type": "scaffold",
+    "title": "How many sides does a square have?",
+    "text": "All four sides of a square are equal. A common mistake is to square the side and answer 81, which is the area, not the distance around. How many sides do you add?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$4$$"
+    ]
+  },
+  {
+    "id": "prealg-l9p2b-h2",
+    "type": "scaffold",
+    "title": "Multiply the side by the number of sides",
+    "text": "What is $$4 \\times 9$$?",
+    "dependencies": [
+      "prealg-l9p2b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$36$$"
+    ]
+  },
+  {
+    "id": "prealg-l9p2b-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "Perimeter $$= 4 \\times 9 = 36$$. Common mistake: answering $$9^{2} = 81$$. General rule: a square's perimeter is $$4s$$ and its area is $$s^{2}$$. Match the formula to the quantity the question names.",
+    "dependencies": [
+      "prealg-l9p2b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

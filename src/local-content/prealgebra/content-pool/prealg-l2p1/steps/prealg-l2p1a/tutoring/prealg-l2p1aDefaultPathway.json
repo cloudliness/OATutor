@@ -1,0 +1,50 @@
+[
+  {
+    "id": "prealg-l2p1a-h1",
+    "type": "scaffold",
+    "title": "Same sign or opposite signs?",
+    "text": "Adding a positive number moves right. You start at $$-8$$ and move 15 units right. A common mistake is to add the absolute values and keep the negative sign. Which way does $$+15$$ move you?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "MultipleChoice",
+    "answerType": "string",
+    "hintAnswer": [
+      "Right, toward positive"
+    ],
+    "choices": [
+      "Left, toward more negative",
+      "Right, toward positive"
+    ]
+  },
+  {
+    "id": "prealg-l2p1a-h2",
+    "type": "scaffold",
+    "title": "How far past zero?",
+    "text": "The first 8 units of the move cancel the debt of 8 and land on 0. The remaining distance is $$15 - 8$$. What is $$15 - 8$$?",
+    "dependencies": [
+      "prealg-l2p1a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$7$$"
+    ]
+  },
+  {
+    "id": "prealg-l2p1a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$-8 + 15 = 7$$. You move from $$-8$$ through 0 and 7 units into the positives. Common mistake: computing $$-(8 + 15) = -23$$. General rule: to add numbers with opposite signs, subtract the smaller absolute value from the larger one and keep the sign of the number with the larger absolute value.",
+    "dependencies": [
+      "prealg-l2p1a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

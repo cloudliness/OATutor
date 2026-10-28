@@ -102,8 +102,11 @@ class ProblemCard extends React.Component {
             }
         }
 
-        // Scaffold (textbox) hints always get an "Answer" sub-hint dropdown.
-        this.ensureScaffoldAnswerSubHints(this.hints);
+        // Guided lessons already end with a worked solution. An answer
+        // dropdown on every scaffold would skip the method.
+        if (!props.guidedHints) {
+            this.ensureScaffoldAnswerSubHints(this.hints);
+        }
 
         // Step-level bottom-out answer (last hint) — still lesson-gated.
         if (
@@ -686,8 +689,9 @@ class ProblemCard extends React.Component {
                     dependencies: Array.from(Array(this.hints.length).keys()),
                 });
             }
-            // Scaffold answer sub-hints always (textbox hints need an Answer dropdown).
-            this.ensureScaffoldAnswerSubHints(this.hints);
+            if (!this.props.guidedHints) {
+                this.ensureScaffoldAnswerSubHints(this.hints);
+            }
         
             this.setState({
                 hints: this.hints,

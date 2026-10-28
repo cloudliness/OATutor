@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l2p4b",
+  "stepAnswer": [
+    "$$32$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "$$-4 \\times (-8)$$",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$32$$"
+}

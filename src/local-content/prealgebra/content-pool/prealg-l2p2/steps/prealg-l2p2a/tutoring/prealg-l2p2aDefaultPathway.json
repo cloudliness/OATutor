@@ -1,0 +1,50 @@
+[
+  {
+    "id": "prealg-l2p2a-h1",
+    "type": "scaffold",
+    "title": "What sign should the product have?",
+    "text": "One factor is negative and one is positive, so the signs are opposite. A common mistake is to multiply the absolute values and leave the product positive. What sign does $$-6 \\times 4$$ have?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "MultipleChoice",
+    "answerType": "string",
+    "hintAnswer": [
+      "Negative"
+    ],
+    "choices": [
+      "Positive",
+      "Negative"
+    ]
+  },
+  {
+    "id": "prealg-l2p2a-h2",
+    "type": "scaffold",
+    "title": "Multiply the absolute values",
+    "text": "Ignore the signs for a moment. What is $$6 \\times 4$$?",
+    "dependencies": [
+      "prealg-l2p2a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$24$$"
+    ]
+  },
+  {
+    "id": "prealg-l2p2a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$-6 \\times 4 = -24$$. Common mistake: writing $$24$$ because 'times makes things bigger.' Size and sign are separate: the absolute value is 24, and opposite signs make it negative. General rule: opposite signs give a negative product; same signs give a positive product.",
+    "dependencies": [
+      "prealg-l2p2a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

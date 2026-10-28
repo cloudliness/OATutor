@@ -1,0 +1,63 @@
+[
+  {
+    "id": "prealg-l1p2a-h1",
+    "type": "scaffold",
+    "title": "Which pieces are not addition?",
+    "text": "Addition waits until multiplication and division are finished. There are two higher-priority pieces here: $$48 \\div 6$$ and $$3 \\times 2$$. A common mistake is to do $$6 + 3$$ because those numbers sit next to each other. What is $$48 \\div 6$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$8$$"
+    ]
+  },
+  {
+    "id": "prealg-l1p2a-h2",
+    "type": "scaffold",
+    "title": "Compute the product",
+    "text": "The other higher-priority piece is independent of the division. What is $$3 \\times 2$$?",
+    "dependencies": [
+      "prealg-l1p2a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$6$$"
+    ]
+  },
+  {
+    "id": "prealg-l1p2a-h3",
+    "type": "scaffold",
+    "title": "Add the two results",
+    "text": "The expression has collapsed to $$8 + 6$$. What is that sum?",
+    "dependencies": [
+      "prealg-l1p2a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$14$$"
+    ]
+  },
+  {
+    "id": "prealg-l1p2a-h4",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$48 \\div 6 + 3 \\times 2 = 8 + 6 = 14$$. Common mistake: adding $$6 + 3$$ before multiplying or dividing. General rule: finish every multiplication and division, then do the addition.",
+    "dependencies": [
+      "prealg-l1p2a-h3"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

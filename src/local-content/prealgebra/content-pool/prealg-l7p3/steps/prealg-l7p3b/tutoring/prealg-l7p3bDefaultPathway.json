@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l7p3b-h1",
+    "type": "scaffold",
+    "title": "Undo the subtraction first",
+    "text": "$$3n - 4$$ subtracts 4 after multiplying by 3. Add 4 to both sides before you divide. A common mistake is to subtract 4 from 11. What is $$11 + 4$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$15$$"
+    ]
+  },
+  {
+    "id": "prealg-l7p3b-h2",
+    "type": "scaffold",
+    "title": "Divide by 3",
+    "text": "$$3n = 15$$. What is $$15 \\div 3$$?",
+    "dependencies": [
+      "prealg-l7p3b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$5$$"
+    ]
+  },
+  {
+    "id": "prealg-l7p3b-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$3n - 4 = 11$$. Add 4: $$3n = 15$$. Divide by 3: $$n = 5$$. Check: $$3(5) - 4 = 11$$. Common mistake: $$n = \\frac{11 - 4}{3} = \\frac{7}{3}$$. General rule: reverse the order of operations, and use the inverse operation on both sides.",
+    "dependencies": [
+      "prealg-l7p3b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

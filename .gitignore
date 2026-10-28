@@ -44,6 +44,8 @@ export.py
 /generated
 
 public/static/images/figures/oatutor/
+public/static/content/
+scripts/__pycache__/
 
 # Course-document compiler caches / large BDA outputs (keep .gitkeep + fixtures)
 aws/aiAgentGeneration/documents/bda-raw/**

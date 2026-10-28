@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l5p4a-h1",
+    "type": "scaffold",
+    "title": "How many dollars is the discount?",
+    "text": "$$20\\%$$ of the price is the amount removed, not 20 dollars. A common mistake is to answer $$40 - 20 = 20$$. What is $$0.20 \\times 40$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$8$$"
+    ]
+  },
+  {
+    "id": "prealg-l5p4a-h2",
+    "type": "scaffold",
+    "title": "Subtract the discount from the original price",
+    "text": "The sale price is $$40 - 8$$. What is that difference?",
+    "dependencies": [
+      "prealg-l5p4a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$32$$"
+    ]
+  },
+  {
+    "id": "prealg-l5p4a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "The discount is $$0.20 \\times 40 = 8$$ dollars, so the sale price is $$40 - 8 = 32$$ dollars. Equivalently, you pay $$80\\%$$ of the price: $$0.80 \\times 40 = 32$$. Common mistake: subtracting 20 from 40. General rule: percent off means subtract (percent as a decimal) times the original price.",
+    "dependencies": [
+      "prealg-l5p4a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

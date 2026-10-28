@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l8p1a-h1",
+    "type": "scaffold",
+    "title": "How many factors of 2?",
+    "text": "$$2^{5}$$ means $$2 \\times 2 \\times 2 \\times 2 \\times 2$$, five factors. A common mistake is to compute $$2 \\times 5 = 10$$. What is $$2 \\times 2$$, the product of the first two factors?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$4$$"
+    ]
+  },
+  {
+    "id": "prealg-l8p1a-h2",
+    "type": "scaffold",
+    "title": "Keep multiplying",
+    "text": "$$4 \\times 2 = 8$$, $$8 \\times 2 = 16$$, and one more factor of 2 remains. What is $$16 \\times 2$$?",
+    "dependencies": [
+      "prealg-l8p1a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$32$$"
+    ]
+  },
+  {
+    "id": "prealg-l8p1a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$2^{5} = 2 \\times 2 \\times 2 \\times 2 \\times 2 = 32$$. Common mistake: answering 10. General rule: the exponent counts factors of the base. It does not tell you to multiply the base by the exponent.",
+    "dependencies": [
+      "prealg-l8p1a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

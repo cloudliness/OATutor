@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l7p3a",
+  "stepAnswer": [
+    "$$6$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "Solve $$2x + 5 = 17$$.",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$6$$"
+}

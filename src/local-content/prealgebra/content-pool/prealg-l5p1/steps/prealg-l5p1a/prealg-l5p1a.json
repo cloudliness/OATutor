@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l5p1a",
+  "stepAnswer": [
+    "$$20$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "What is $$25\\%$$ of 80?",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$20$$"
+}

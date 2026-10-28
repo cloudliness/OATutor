@@ -1,0 +1,11 @@
+{
+  "id": "prealg-l7p3",
+  "title": "Two steps: addition with multiplication",
+  "body": "Undo the operation farthest from the variable first. That is usually the added or subtracted term.",
+  "variabilization": {},
+  "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+  "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+  "lesson": "7. Variables and Simple Equations",
+  "lessonId": "prealg-lesson-7",
+  "courseName": "Pre-Algebra"
+}

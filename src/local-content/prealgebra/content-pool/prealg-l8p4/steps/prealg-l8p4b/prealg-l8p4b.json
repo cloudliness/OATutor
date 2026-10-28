@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l8p4b",
+  "stepAnswer": [
+    "$$\\frac{3}{5}$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "$$\\sqrt{\\frac{9}{25}}$$",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$\\frac{3}{5}$$"
+}

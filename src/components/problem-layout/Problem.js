@@ -708,6 +708,13 @@ class Problem extends React.Component {
         }
 
         const helpPending = Boolean(helpPenaltyPendingByStep?.[cardIndex]);
+        if (stepStates[cardIndex] == null && typeof this.props.onStepAttempt === "function") {
+            this.props.onStepAttempt({
+                stepIndex: cardIndex,
+                isCorrect: Boolean(isCorrect),
+                helpUsed: helpPending,
+            });
+        }
         // Deferred help penalty: first graded attempt gets no mastery credit.
         const bktIsCorrect = helpPending ? false : isCorrect;
 
@@ -1701,6 +1708,7 @@ class Problem extends React.Component {
                                                     unlockFirstHint={this.unlockFirstHint}
                                                     giveStuBottomHint={this.giveStuBottomHint}
                                                     giveDynamicHint={this.giveDynamicHint}
+                                                    guidedHints={Boolean(this.props.lesson?.guidedHints)}
                                                     prompt_template={this.prompt_template}
                                                     showCardHeader={true}
                                                     hintToggleTrigger={this.state.hintToggleTrigger}
@@ -1792,7 +1800,7 @@ class Problem extends React.Component {
                                                 )
                                             }
                                         >
-                                            {translate('problem.NextProblem')}
+                                            {this.props.nextButtonLabel || translate('problem.NextProblem')}
                                         </Button>
                                     </Grid>
                                 </Grid>

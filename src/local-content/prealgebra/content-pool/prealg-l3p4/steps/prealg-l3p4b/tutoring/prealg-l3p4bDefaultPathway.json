@@ -1,0 +1,63 @@
+[
+  {
+    "id": "prealg-l3p4b-h1",
+    "type": "scaffold",
+    "title": "Name the common denominator",
+    "text": "5 and 2 share no factor other than 1, so the least common denominator is their product. A common mistake is to subtract numerators and denominators to get $$\\frac{3}{3}$$. What is $$5 \\times 2$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$10$$"
+    ]
+  },
+  {
+    "id": "prealg-l3p4b-h2",
+    "type": "scaffold",
+    "title": "Rewrite $$\\frac{4}{5}$$ over 10",
+    "text": "Multiply the numerator 4 by 2. What is the new numerator?",
+    "dependencies": [
+      "prealg-l3p4b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$8$$"
+    ]
+  },
+  {
+    "id": "prealg-l3p4b-h3",
+    "type": "scaffold",
+    "title": "Rewrite $$\\frac{1}{2}$$ and subtract",
+    "text": "$$\\frac{1}{2} = \\frac{5}{10}$$. What is $$8 - 5$$, the numerator of the difference?",
+    "dependencies": [
+      "prealg-l3p4b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$3$$"
+    ]
+  },
+  {
+    "id": "prealg-l3p4b-h4",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$\\frac{4}{5} - \\frac{1}{2} = \\frac{8}{10} - \\frac{5}{10} = \\frac{3}{10}$$. Common mistake: $$\\frac{4 - 1}{5 - 2} = 1$$. General rule: when the denominators are different, build the least common denominator, rewrite both fractions, and only then subtract the numerators.",
+    "dependencies": [
+      "prealg-l3p4b-h3"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

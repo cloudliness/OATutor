@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l8p4a-h1",
+    "type": "scaffold",
+    "title": "Take each root separately",
+    "text": "There is no plus sign under a single radical, so simplify each root and then add. A common mistake is $$\\sqrt{49 + 16} = \\sqrt{65}$$. What is $$\\sqrt{49}$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$7$$"
+    ]
+  },
+  {
+    "id": "prealg-l8p4a-h2",
+    "type": "scaffold",
+    "title": "Second root, then add",
+    "text": "$$\\sqrt{16} = 4$$. What is $$7 + 4$$?",
+    "dependencies": [
+      "prealg-l8p4a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$11$$"
+    ]
+  },
+  {
+    "id": "prealg-l8p4a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$\\sqrt{49} + \\sqrt{16} = 7 + 4 = 11$$. Common mistake: $$\\sqrt{49 + 16} = \\sqrt{65}$$, which is about 8.1, not 11. General rule: you may add roots only after they are simplified, and only like radicals combine. $$\\sqrt{a} + \\sqrt{b}$$ is not $$\\sqrt{a + b}$$.",
+    "dependencies": [
+      "prealg-l8p4a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

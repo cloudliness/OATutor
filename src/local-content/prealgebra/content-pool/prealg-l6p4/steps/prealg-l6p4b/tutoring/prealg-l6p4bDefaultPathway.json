@@ -1,0 +1,50 @@
+[
+  {
+    "id": "prealg-l6p4b-h1",
+    "type": "scaffold",
+    "title": "Which quantity is 'per one'?",
+    "text": "Miles per gallon puts gallons in the denominator. A common mistake is to divide 6 by 180 and still call the result miles per gallon. Which quotient has miles in the numerator and gallons in the denominator?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "MultipleChoice",
+    "answerType": "string",
+    "hintAnswer": [
+      "$$180 \\div 6$$"
+    ],
+    "choices": [
+      "$$180 \\div 6$$",
+      "$$6 \\div 180$$"
+    ]
+  },
+  {
+    "id": "prealg-l6p4b-h2",
+    "type": "scaffold",
+    "title": "Divide",
+    "text": "What is $$180 \\div 6$$?",
+    "dependencies": [
+      "prealg-l6p4b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$30$$"
+    ]
+  },
+  {
+    "id": "prealg-l6p4b-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$180 \\div 6 = 30$$ miles per gallon. Check: $$30 \\times 6 = 180$$. Common mistake: answering $$\\frac{1}{30}$$ gallon per mile and labeling it as miles per gallon. General rule: read the word 'per' as division, with the unit after 'per' in the denominator.",
+    "dependencies": [
+      "prealg-l6p4b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

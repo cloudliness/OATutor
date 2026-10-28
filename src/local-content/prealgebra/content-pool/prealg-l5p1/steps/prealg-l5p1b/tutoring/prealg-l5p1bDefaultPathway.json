@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l5p1b-h1",
+    "type": "scaffold",
+    "title": "What does 'per hundred' ask for?",
+    "text": "A percent is a numerator when the denominator is 100. So find the number $$n$$ with $$\\frac{3}{5} = \\frac{n}{100}$$, which means $$n = \\frac{3}{5} \\times 100$$. A common mistake is to write 3%, or 35. What is $$100 \\div 5$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$20$$"
+    ]
+  },
+  {
+    "id": "prealg-l5p1b-h2",
+    "type": "scaffold",
+    "title": "Multiply by the numerator",
+    "text": "Each fifth of 100 is 20, and you have 3 fifths. What is $$3 \\times 20$$?",
+    "dependencies": [
+      "prealg-l5p1b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$60$$"
+    ]
+  },
+  {
+    "id": "prealg-l5p1b-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$\\frac{3}{5} = \\frac{3}{5} \\times 100\\% = 60\\%$$. Common mistake: reading the numerator as the percent. General rule: to convert a fraction to a percent, multiply by 100.",
+    "dependencies": [
+      "prealg-l5p1b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

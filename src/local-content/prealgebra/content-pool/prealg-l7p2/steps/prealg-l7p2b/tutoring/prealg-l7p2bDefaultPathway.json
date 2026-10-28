@@ -1,0 +1,50 @@
+[
+  {
+    "id": "prealg-l7p2b-h1",
+    "type": "scaffold",
+    "title": "What undoes dividing by 5?",
+    "text": "$$\\frac{m}{5}$$ is $$m$$ divided by 5. Multiplication by 5 undoes that division. A common mistake is to divide 6 by 5. Which operation isolates $$m$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "MultipleChoice",
+    "answerType": "string",
+    "hintAnswer": [
+      "Multiply both sides by 5"
+    ],
+    "choices": [
+      "Multiply both sides by 5",
+      "Divide both sides by 5"
+    ]
+  },
+  {
+    "id": "prealg-l7p2b-h2",
+    "type": "scaffold",
+    "title": "Multiply the right side",
+    "text": "What is $$6 \\times 5$$?",
+    "dependencies": [
+      "prealg-l7p2b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$30$$"
+    ]
+  },
+  {
+    "id": "prealg-l7p2b-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$\\frac{m}{5} = 6$$. Multiply both sides by 5: $$m = 30$$. Check: $$\\frac{30}{5} = 6$$. Common mistake: answering $$\\frac{6}{5}$$. General rule: to undo division by a nonzero number, multiply both sides by that number.",
+    "dependencies": [
+      "prealg-l7p2b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

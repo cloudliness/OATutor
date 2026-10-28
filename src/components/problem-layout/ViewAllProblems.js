@@ -23,10 +23,11 @@ import BrandLogoNav from '@components/BrandLogoNav';
 import Popup from '@components/Popup/Popup';
 import About from '../../pages/Posts/About';
 import ProblemWrapper from '@components/problem-layout/ProblemWrapper';
-import { findLessonById, ThemeContext, SHOW_COPYRIGHT, SITE_NAME } from '../../config/config.js';
+import { findLessonById, ThemeContext, SHOW_COPYRIGHT, SITE_NAME, coursePlans } from '../../config/config.js';
 import { getStudentDisplayName } from '../../util/getStudentDisplayName';
-import { CONTENT_SOURCE } from '@common/global-config';
 import withTranslation from '../../util/withTranslation.js';
+import { loadProblemPool } from '../../content/loadProblemPool';
+import { courseNameForLesson, isCourseUnlocked } from '../../course-gate/courseAccess';
 
 import userIcon from "../../assets/UserThumb.svg";
 import FeedbackOutlinedIcon from "@material-ui/icons/FeedbackOutlined";
@@ -119,16 +120,22 @@ const ViewAllProblems = ({ translate, history }) => {
 
   // Load pool
   useEffect(() => {
-    import(`@generated/processed-content-pool/${CONTENT_SOURCE}.json`)
-      .then(m => setProblemPool(m.default || []))
+    loadProblemPool()
+      .then(pool => setProblemPool(pool))
       .catch(console.error);
   }, []);
 
   // Find lesson
   useEffect(() => {
     const found = findLessonById(lessonID);
-    if (found) setLesson(found);
-  }, [lessonID]);
+    if (!found) return;
+    const courseName = courseNameForLesson(coursePlans, found);
+    if (courseName && !isCourseUnlocked(courseName)) {
+      history.push("/");
+      return;
+    }
+    setLesson(found);
+  }, [lessonID, history]);
 
   // Filter by objectives
   const memoFiltered = useMemo(() => {

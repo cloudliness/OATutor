@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l8p1b-h1",
+    "type": "scaffold",
+    "title": "What does an exponent of 3 mean for a base of 10?",
+    "text": "$$10^{3} = 10 \\times 10 \\times 10$$. Powers of 10 write 1 followed by as many zeros as the exponent. A common mistake is to answer $$10 \\times 3 = 30$$. How many zeros follow the 1?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$3$$"
+    ]
+  },
+  {
+    "id": "prealg-l8p1b-h2",
+    "type": "scaffold",
+    "title": "Write the number",
+    "text": "1 followed by 3 zeros is which whole number?",
+    "dependencies": [
+      "prealg-l8p1b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$1000$$"
+    ]
+  },
+  {
+    "id": "prealg-l8p1b-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$10^{3} = 10 \\times 10 \\times 10 = 1000$$. Common mistake: $$10 \\times 3 = 30$$. General rule: $$10^{n}$$ is 1 followed by $$n$$ zeros.",
+    "dependencies": [
+      "prealg-l8p1b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

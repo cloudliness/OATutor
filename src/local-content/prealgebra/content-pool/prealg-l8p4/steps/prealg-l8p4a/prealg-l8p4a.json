@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l8p4a",
+  "stepAnswer": [
+    "$$11$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "$$\\sqrt{49} + \\sqrt{16}$$",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$11$$"
+}

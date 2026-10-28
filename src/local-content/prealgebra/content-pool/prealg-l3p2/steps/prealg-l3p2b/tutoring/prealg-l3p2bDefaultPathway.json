@@ -1,0 +1,80 @@
+[
+  {
+    "id": "prealg-l3p2b-h1",
+    "type": "scaffold",
+    "title": "Why can't you add yet?",
+    "text": "To add fractions, the pieces must be the same size. The denominators 4 and 6 are different, so the fractions are not counting the same kind of piece. A common mistake is to add the denominators and answer $$\\frac{2}{10}$$. What is the least common denominator: the smallest positive number that both 4 and 6 divide into?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$12$$"
+    ]
+  },
+  {
+    "id": "prealg-l3p2b-h2",
+    "type": "scaffold",
+    "title": "Rewrite the first fraction",
+    "text": "4 goes into 12 three times, so multiply the numerator and the denominator of $$\\frac{1}{4}$$ by 3. What is the new numerator?",
+    "dependencies": [
+      "prealg-l3p2b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$3$$"
+    ]
+  },
+  {
+    "id": "prealg-l3p2b-h3",
+    "type": "scaffold",
+    "title": "Rewrite the second fraction",
+    "text": "6 goes into 12 two times, so multiply the numerator and the denominator of $$\\frac{1}{6}$$ by 2. What is the new numerator?",
+    "dependencies": [
+      "prealg-l3p2b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$2$$"
+    ]
+  },
+  {
+    "id": "prealg-l3p2b-h4",
+    "type": "scaffold",
+    "title": "Add the numerators only",
+    "text": "Both fractions now have denominator 12: $$\\frac{3}{12} + \\frac{2}{12}$$. Add the numerators and keep 12. What is the numerator of the sum?",
+    "dependencies": [
+      "prealg-l3p2b-h3"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$5$$"
+    ]
+  },
+  {
+    "id": "prealg-l3p2b-h5",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$\\frac{1}{4} + \\frac{1}{6} = \\frac{3}{12} + \\frac{2}{12} = \\frac{5}{12}$$. Common mistake: adding denominators to get $$\\frac{2}{10}$$. Denominators name the size of the pieces; they are not terms you add. General rule: rewrite both fractions with the least common denominator, add the numerators, and keep that denominator.",
+    "dependencies": [
+      "prealg-l3p2b-h4"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

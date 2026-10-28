@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l5p4a",
+  "stepAnswer": [
+    "$$32$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "A $$\\$40$$ item is discounted $$20\\%$$. What is the sale price in dollars?",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$32$$"
+}

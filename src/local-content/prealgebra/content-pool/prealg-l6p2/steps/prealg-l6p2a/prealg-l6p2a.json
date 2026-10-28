@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l6p2a",
+  "stepAnswer": [
+    "$$49$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "4 tickets cost $$\\$28$$. At the same price per ticket, what do 7 tickets cost?",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$49$$"
+}

@@ -40,15 +40,22 @@ import ViewAllProblems from "./components/problem-layout/ViewAllProblems";
 import { ResponsiveProvider } from "./util/ResponsiveContext";
 
 // ### BEGIN CUSTOMIZABLE IMPORTS ###
-import config from "./config/firebaseConfig.js";
-import skillModel from "./content-sources/oatutor/skillModel.json";
-import defaultBKTParams from "./content-sources/oatutor/bkt-params/defaultBKTParams.json";
-import experimentalBKTParams from "./content-sources/oatutor/bkt-params/experimentalBKTParams.json";
+import config from "./config/firebaseConfig.defaults.js";
+import baseSkillModel from "./content-sources/oatutor/skillModel.json";
+import prealgebraSkills from "./local-content/prealgebra/skillModel.json";
+import baseDefaultBkt from "./content-sources/oatutor/bkt-params/defaultBKTParams.json";
+import prealgebraBkt from "./local-content/prealgebra/bktParams.json";
+import baseExperimentalBkt from "./content-sources/oatutor/bkt-params/experimentalBKTParams.json";
+import AlgebraCheck from "./components/course-gate/AlgebraCheck";
 import { heuristic as defaultHeuristic } from "./models/BKT/problem-select-heuristics/defaultHeuristic.js";
 import { heuristic as experimentalHeuristic } from "./models/BKT/problem-select-heuristics/experimentalHeuristic.js";
 import BrowserStorage from "./util/browserStorage";
 import tableOfContents from "@components/tableOfContents";
 // ### END CUSTOMIZABLE IMPORTS ###
+
+const skillModel = { ...baseSkillModel, ...prealgebraSkills };
+const defaultBKTParams = { ...baseDefaultBkt, ...prealgebraBkt };
+const experimentalBKTParams = { ...baseExperimentalBkt, ...prealgebraBkt };
 
 loadFirebaseEnvConfig(config);
 
@@ -434,6 +441,12 @@ class App extends React.Component {
                                         path = "/table-of-contents"
                                         component={tableOfContents}
 
+                                    />
+
+                                    <Route
+                                        exact
+                                        path="/algebra-check"
+                                        component={AlgebraCheck}
                                     />
 
                                     <Route component={NotFound} />

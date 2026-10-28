@@ -1,0 +1,51 @@
+[
+  {
+    "id": "prealg-l4p1a-h1",
+    "type": "scaffold",
+    "title": "Which place is the 6 in?",
+    "text": "Reading to the right of the decimal point, the first place is tenths and the second is hundredths. In $$3.64$$ the 6 is the first digit after the point. A common mistake is to say the 6 is worth 6 hundredths, or worth 6 ones. The 6 is in which place?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "MultipleChoice",
+    "answerType": "string",
+    "hintAnswer": [
+      "Tenths"
+    ],
+    "choices": [
+      "Tenths",
+      "Hundredths",
+      "Ones"
+    ]
+  },
+  {
+    "id": "prealg-l4p1a-h2",
+    "type": "scaffold",
+    "title": "Turn the place into a value",
+    "text": "One tenth is $$0.1$$. Six of those is $$6 \\times 0.1$$. What is that value?",
+    "dependencies": [
+      "prealg-l4p1a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$0.6$$"
+    ]
+  },
+  {
+    "id": "prealg-l4p1a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "The digit 6 in $$3.64$$ is in the tenths place, so its value is $$0.6$$. The 4 is worth $$0.04$$, and the 3 is worth 3. Common mistake: reading every digit after the decimal as hundredths. General rule: the first place to the right of the decimal is tenths ($$10^{-1}$$), then hundredths ($$10^{-2}$$).",
+    "dependencies": [
+      "prealg-l4p1a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

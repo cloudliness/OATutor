@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l7p3b",
+  "stepAnswer": [
+    "$$5$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "Solve $$3n - 4 = 11$$.",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$5$$"
+}

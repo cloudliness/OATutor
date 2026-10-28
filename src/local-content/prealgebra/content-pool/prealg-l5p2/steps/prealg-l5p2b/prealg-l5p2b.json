@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l5p2b",
+  "stepAnswer": [
+    "$$8$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "Write $$0.08$$ as a percent.",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$8$$"
+}

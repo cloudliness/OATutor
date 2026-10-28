@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l4p2b-h1",
+    "type": "scaffold",
+    "title": "Multiply as whole numbers first",
+    "text": "Ignore the decimal points and multiply $$6 \\times 4$$. You will put the decimal point back by counting decimal places in the factors. A common mistake is to multiply $$0.6 \\times 0.4$$ and keep only one decimal place. What is $$6 \\times 4$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$24$$"
+    ]
+  },
+  {
+    "id": "prealg-l4p2b-h2",
+    "type": "scaffold",
+    "title": "How many decimal places go in the product?",
+    "text": "$$0.6$$ has 1 decimal place and $$0.4$$ has 1. The product has the sum of those counts. How many decimal places should the product show?",
+    "dependencies": [
+      "prealg-l4p2b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$2$$"
+    ]
+  },
+  {
+    "id": "prealg-l4p2b-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$0.6 \\times 0.4 = 0.24$$. The whole-number product 24 needs two decimal places, so it becomes 0.24. Common mistake: answering $$2.4$$ by keeping only one decimal place, or adding the decimals to get $$1.0$$. General rule: multiply the digits as whole numbers, then give the product as many decimal places as the factors have together.",
+    "dependencies": [
+      "prealg-l4p2b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

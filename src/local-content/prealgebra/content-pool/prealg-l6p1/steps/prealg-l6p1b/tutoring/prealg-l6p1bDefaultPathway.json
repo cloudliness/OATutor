@@ -1,0 +1,51 @@
+[
+  {
+    "id": "prealg-l6p1b-h1",
+    "type": "scaffold",
+    "title": "What does 'per hour' ask for?",
+    "text": "Miles per hour is the number of miles for one hour, so hours belong in the denominator. A common mistake is to multiply 120 by 3, which counts mile-hours, not a speed. Which operation turns 120 miles and 3 hours into miles per hour?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "MultipleChoice",
+    "answerType": "string",
+    "hintAnswer": [
+      "Divide 120 by 3"
+    ],
+    "choices": [
+      "Divide 120 by 3",
+      "Multiply 120 by 3",
+      "Divide 3 by 120"
+    ]
+  },
+  {
+    "id": "prealg-l6p1b-h2",
+    "type": "scaffold",
+    "title": "Do that division",
+    "text": "What is $$120 \\div 3$$?",
+    "dependencies": [
+      "prealg-l6p1b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$40$$"
+    ]
+  },
+  {
+    "id": "prealg-l6p1b-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$120 \\div 3 = 40$$ miles per hour. Check: $$40 \\times 3 = 120$$. Common mistake: reporting 360, which is a product, not a rate. General rule: a unit rate is the first quantity divided by the second, so the second quantity becomes 1.",
+    "dependencies": [
+      "prealg-l6p1b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

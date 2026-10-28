@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l9p4b-h1",
+    "type": "scaffold",
+    "title": "How many centimeters are in one meter?",
+    "text": "1 meter = 100 centimeters. Centi- means hundredth, so you multiply by 100 when converting meters to centimeters. A common mistake is to multiply by 10, or to divide by 100. How many centimeters are in 1 meter?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$100$$"
+    ]
+  },
+  {
+    "id": "prealg-l9p4b-h2",
+    "type": "scaffold",
+    "title": "Multiply 4.5 by that factor",
+    "text": "What is $$4.5 \\times 100$$?",
+    "dependencies": [
+      "prealg-l9p4b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$450$$"
+    ]
+  },
+  {
+    "id": "prealg-l9p4b-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$4.5 \\times 100 = 450$$ centimeters. Common mistake: answering 45 or 0.045. General rule: the metric prefixes change by powers of 10. Centi- means hundredth, so there are 100 centimeters in a meter. Multiply when you convert to the smaller unit.",
+    "dependencies": [
+      "prealg-l9p4b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

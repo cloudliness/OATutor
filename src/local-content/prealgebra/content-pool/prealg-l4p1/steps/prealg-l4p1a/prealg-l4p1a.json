@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l4p1a",
+  "stepAnswer": [
+    "$$0.6$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "In $$3.64$$, what is the value of the digit 6?",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$0.6$$"
+}

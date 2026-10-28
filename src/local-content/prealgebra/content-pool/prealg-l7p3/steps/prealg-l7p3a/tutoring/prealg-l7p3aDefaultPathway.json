@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l7p3a-h1",
+    "type": "scaffold",
+    "title": "Which operation do you undo first?",
+    "text": "$$2x + 5$$ adds 5 after doubling $$x$$. Equations are undone in reverse, so remove the $$+ 5$$ before you divide by 2. A common mistake is to divide 17 by 2 first and then not know what to do with the 5. What is $$17 - 5$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$12$$"
+    ]
+  },
+  {
+    "id": "prealg-l7p3a-h2",
+    "type": "scaffold",
+    "title": "Divide both sides by the coefficient",
+    "text": "You now have $$2x = 12$$. What is $$12 \\div 2$$?",
+    "dependencies": [
+      "prealg-l7p3a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$6$$"
+    ]
+  },
+  {
+    "id": "prealg-l7p3a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$2x + 5 = 17$$. Subtract 5: $$2x = 12$$. Divide by 2: $$x = 6$$. Check: $$2(6) + 5 = 17$$. Common mistake: dividing before subtracting, which splits the 5 incorrectly if you are not careful. General rule: undo addition or subtraction first, then undo multiplication or division. Do the same thing to both sides at every step.",
+    "dependencies": [
+      "prealg-l7p3a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

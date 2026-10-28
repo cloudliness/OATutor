@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l6p1a-h1",
+    "type": "scaffold",
+    "title": "A ratio is a fraction",
+    "text": "18 to 24 means $$\\frac{18}{24}$$. Simplifying a ratio uses the same idea as simplifying a fraction: divide both parts by their greatest common factor. A common mistake is to subtract 6 from both parts and get 12 to 18, which is not the same ratio. What is the greatest common factor of 18 and 24?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$6$$"
+    ]
+  },
+  {
+    "id": "prealg-l6p1a-h2",
+    "type": "scaffold",
+    "title": "Divide both parts",
+    "text": "$$18 \\div 6 = 3$$ and $$24 \\div 6 = 4$$. The simplified ratio is $$\\frac{3}{4}$$. What is the numerator of that simplified ratio?",
+    "dependencies": [
+      "prealg-l6p1a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$3$$"
+    ]
+  },
+  {
+    "id": "prealg-l6p1a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$18:24 = \\frac{18}{24} = \\frac{3}{4}$$. Common mistake: reversing the order, or subtracting instead of dividing. General rule: write the ratio as a fraction in the order the words give you, then divide the numerator and the denominator by their greatest common factor.",
+    "dependencies": [
+      "prealg-l6p1a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

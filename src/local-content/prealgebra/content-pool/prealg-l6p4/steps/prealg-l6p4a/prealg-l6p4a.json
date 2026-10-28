@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l6p4a",
+  "stepAnswer": [
+    "$$24$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "Solve $$\\frac{5}{8} = \\frac{15}{x}$$ for $$x$$.",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$24$$"
+}

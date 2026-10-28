@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l9p1b",
+  "stepAnswer": [
+    "$$40$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "What is the area of that same 8 by 5 rectangle?",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$40$$"
+}

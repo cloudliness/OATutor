@@ -8,7 +8,7 @@
     {
       "id": "prealg-lesson-1",
       "name": "1. Whole Numbers and Order of Operations",
-      "topics": "Whole numbers and order of operations",
+      "topics": "",
       "allowRecycle": true,
       "guidedHints": true,
       "allowBottomHint": false,
@@ -22,7 +22,7 @@
     {
       "id": "prealg-lesson-2",
       "name": "2. Integers and Negative Numbers",
-      "topics": "Integers and negative numbers",
+      "topics": "",
       "allowRecycle": true,
       "guidedHints": true,
       "allowBottomHint": false,
@@ -36,7 +36,7 @@
     {
       "id": "prealg-lesson-3",
       "name": "3. Fractions",
-      "topics": "Fractions, including mixed numbers",
+      "topics": "",
       "allowRecycle": true,
       "guidedHints": true,
       "allowBottomHint": false,
@@ -50,7 +50,7 @@
     {
       "id": "prealg-lesson-4",
       "name": "4. Decimals",
-      "topics": "Decimal place value and operations",
+      "topics": "",
       "allowRecycle": true,
       "guidedHints": true,
       "allowBottomHint": false,
@@ -64,7 +64,7 @@
     {
       "id": "prealg-lesson-5",
       "name": "5. Percents",
-      "topics": "Percents, conversions, and percent of a number",
+      "topics": "",
       "allowRecycle": true,
       "guidedHints": true,
       "allowBottomHint": false,
@@ -78,7 +78,7 @@
     {
       "id": "prealg-lesson-6",
       "name": "6. Ratios, Rates, and Proportions",
-      "topics": "Ratios, rates, and proportions",
+      "topics": "",
       "allowRecycle": true,
       "guidedHints": true,
       "allowBottomHint": false,
@@ -92,7 +92,7 @@
     {
       "id": "prealg-lesson-7",
       "name": "7. Variables and Simple Equations",
-      "topics": "Variables and one-step and two-step equations",
+      "topics": "",
       "allowRecycle": true,
       "guidedHints": true,
       "allowBottomHint": false,
@@ -106,7 +106,7 @@
     {
       "id": "prealg-lesson-8",
       "name": "8. Exponents and Square Roots",
-      "topics": "Exponents and square roots",
+      "topics": "",
       "allowRecycle": true,
       "guidedHints": true,
       "allowBottomHint": false,
@@ -120,7 +120,7 @@
     {
       "id": "prealg-lesson-9",
       "name": "9. Geometry and Measurement",
-      "topics": "Perimeter, area, and unit conversion",
+      "topics": "",
       "allowRecycle": true,
       "guidedHints": true,
       "allowBottomHint": false,

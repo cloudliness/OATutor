@@ -250,7 +250,7 @@ class LessonSelection extends React.Component {
                                                         textAlign: "center",
                                                     }}
                                                 >
-                                                    <h3 style={{ margin: 0 }}>{lesson.topics}</h3>
+                                                    {lesson.topics ? <h3 style={{ margin: 0 }}>{lesson.topics}</h3> : null}
                                                 </div>
 
                                                 <Button

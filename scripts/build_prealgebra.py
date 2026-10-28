@@ -579,7 +579,7 @@ def emit(built_lessons):
             {
                 "id": lesson_id,
                 "name": lesson_spec["name"],
-                "topics": lesson_spec["topics"],
+                "topics": "",
                 "allowRecycle": True,
                 "guidedHints": True,
                 "allowBottomHint": False,

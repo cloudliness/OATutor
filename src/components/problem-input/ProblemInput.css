@@ -19,6 +19,7 @@ body {
 
 math-field {
     display: block;
+    position: relative;
     width: 100%;
     min-height: 48px;
     font-size: 22px;
@@ -72,6 +73,8 @@ body.oat-math-kb-open {
 /* MathLive keyboard animations + pull-down handle */
 .ML__keyboard {
     --keyboard-zindex: 1400;
+    /* Room for the drag handle above the first key row. */
+    --keyboard-padding-top: 36px;
 }
 
 /* Always transition backdrop so show/hide aren't instant */

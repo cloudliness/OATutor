@@ -321,9 +321,13 @@ function ensureDragHandle(keyboardRoot) {
     handle.style.height = '28px';
     handle.style.zIndex = '5';
     if (handle.parentElement !== backdrop) backdrop.prepend(handle);
+    // Leave the plate's height alone. It is position:absolute, and a percentage
+    // height is relative to the backdrop, whose height MathLive sets from the
+    // plate. That cycle measured the keypad as 0px and parked the keys offscreen.
+    // Extra padding-top reserves a strip for this handle above the keys.
     if (plate) {
-        plate.style.top = '30px';
-        plate.style.height = 'calc(100% - 36px)';
+        plate.style.top = '';
+        plate.style.height = '';
     }
     return handle;
 }

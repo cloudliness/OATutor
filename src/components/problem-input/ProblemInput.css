@@ -19,6 +19,7 @@ body {
 
 math-field {
     display: block;
+    position: relative;
     width: 100%;
     min-height: 48px;
     font-size: 22px;

@@ -16,6 +16,12 @@ import withWidth from "@material-ui/core/withWidth";
 import { isMobileWidth } from "../../util/responsive";
 import { showMathKeyboardAnimated, hideMathKeyboardAnimated, isMathKeyboardShowSuppressed } from "./mathKeyboardGestures";
 
+function wantsNativeKeyboard() {
+    if (typeof window === "undefined") return false;
+    const coarse = window.matchMedia?.("(pointer: coarse)")?.matches;
+    return Boolean(coarse) || window.innerWidth < 960;
+}
+
 class ProblemInput extends React.Component {
     static contextType = ThemeContext;
 
@@ -31,6 +37,7 @@ class ProblemInput extends React.Component {
         this.state = {
             value: "",
             isMathFieldFocused: false,
+            mathKeypad: false,
         };
     }
 
@@ -93,10 +100,21 @@ class ProblemInput extends React.Component {
     attachMathField = () => {
         const field = this.mathFieldRef.current;
         if (!field || field.dataset.oatBound === '1') return;
+        if (!field.shadowRoot?.querySelector('.ML__keyboard-sink')) return;
         field.dataset.oatBound = '1';
         this._mathField = field;
         this._onMathInput = () => this.publishMathValue(field);
         field.addEventListener('input', this._onMathInput);
+        // Capture runs before MathLive's bubble pointerdown, which calls
+        // preventDefault() and cancels the focus that would open Android's IME.
+        field.addEventListener('pointerdown', this.handleMathFieldPointerDown, true);
+        if (wantsNativeKeyboard()) {
+            try {
+                field.mathVirtualKeyboardPolicy = 'manual';
+            } catch (_) {
+                // attribute on the element still applies at connect time
+            }
+        }
         this.bridgeAndroidIme(field);
         const initial = this.props.state?.inputVal;
         if (typeof initial === 'string' && initial && field.value !== initial) {
@@ -112,20 +130,53 @@ class ProblemInput extends React.Component {
     };
 
     /**
+     * MathLive's keyboard sink is clipped to an empty box with inputmode=none
+     * so its own keypad can replace the OS keyboard. Android Chrome, and an
+     * installed standalone app in particular, will not open the system keyboard
+     * for that node. Give the sink a real box and a numeric input mode.
+     */
+    prepareNativeSink = (field) => {
+        const sink = field?.shadowRoot?.querySelector('.ML__keyboard-sink');
+        if (!sink || !wantsNativeKeyboard()) return sink || null;
+        sink.setAttribute('enterkeyhint', 'done');
+        sink.setAttribute('autocapitalize', 'off');
+        sink.style.position = 'absolute';
+        sink.style.inset = '0';
+        sink.style.width = '100%';
+        sink.style.height = '100%';
+        sink.style.opacity = '1';
+        sink.style.color = 'transparent';
+        sink.style.background = 'transparent';
+        sink.style.clip = 'auto';
+        sink.style.clipPath = 'none';
+        sink.style.fontSize = '16px';
+        sink.style.lineHeight = '1';
+        sink.style.pointerEvents = 'none';
+        sink.style.caretColor = 'transparent';
+        sink.style.overflow = 'hidden';
+        return sink;
+    };
+
+    /**
      * Android Chrome / Gboard delivers text through beforeinput on the hidden
      * keyboard sink (often keyCode 229) and MathLive 0.109 sometimes drops it.
      * If the visible value did not change, insert the character ourselves.
      */
     bridgeAndroidIme = (field) => {
-        const sink = field.shadowRoot?.querySelector('.ML__keyboard-sink');
+        const sink = this.prepareNativeSink(field) || field.shadowRoot?.querySelector('.ML__keyboard-sink');
         if (!sink || sink.dataset.oatIme === '1') return;
         sink.dataset.oatIme = '1';
         sink.setAttribute('enterkeyhint', 'done');
         sink.setAttribute('autocapitalize', 'off');
 
         const syncInputMode = () => {
+            if (!wantsNativeKeyboard()) return;
             const virtualOpen = Boolean(window.mathVirtualKeyboard?.visible);
-            sink.setAttribute('inputmode', virtualOpen ? 'none' : 'text');
+            // inputmode=none is what hides Android's keyboard. Use it only while
+            // the in-app math keypad is actually open.
+            const mode = virtualOpen ? 'none' : 'decimal';
+            sink.setAttribute('inputmode', mode);
+            field.setAttribute('inputmode', mode);
         };
         syncInputMode();
         this._syncImeMode = syncInputMode;
@@ -164,8 +215,10 @@ class ProblemInput extends React.Component {
     keepFieldVisible = () => {
         const field = this.mathFieldRef.current;
         if (!field) return;
+        // Scrolling in response to the native IME's visualViewport resize
+        // blurs the field and dismisses Android's keyboard.
+        if (wantsNativeKeyboard() && !window.mathVirtualKeyboard?.visible) return;
         const viewport = window.visualViewport;
-        const visibleTop = viewport ? viewport.offsetTop : 0;
         const visibleBottom = viewport
             ? viewport.offsetTop + viewport.height
             : window.innerHeight;
@@ -173,15 +226,16 @@ class ProblemInput extends React.Component {
         const keyboardTop = keyboard ? keyboard.getBoundingClientRect().top : visibleBottom;
         const limit = Math.min(visibleBottom, keyboardTop) - 12;
         const rect = field.getBoundingClientRect();
-        if (rect.bottom > limit || rect.top < visibleTop + 64) {
-            const delta = rect.bottom - limit + 28;
-            window.scrollBy({ top: delta, left: 0, behavior: 'smooth' });
+        if (rect.bottom > limit - 8) {
+            field.scrollIntoView({ block: 'center', inline: 'nearest' });
         }
     };
 
     handleKeyboardVisibility = (event) => {
         if (this._syncImeMode) this._syncImeMode();
-        if (event?.detail?.open) {
+        const open = Boolean(event?.detail?.open);
+        if (this.state.mathKeypad !== open) this.setState({ mathKeypad: open });
+        if (open) {
             window.setTimeout(this.keepFieldVisible, 60);
             window.setTimeout(this.keepFieldVisible, 320);
         }
@@ -208,19 +262,91 @@ class ProblemInput extends React.Component {
         }
     };
 
-    /** Mobile: open MathLive keyboard when the field is interacted with and it's hidden. */
-    showMobileKeyboardIfNeeded = () => {
-        if (!isMobileWidth(this.props.width)) return;
-        if (isMathKeyboardShowSuppressed()) return;
-        const mathField = this.mathFieldRef.current;
-        if (!mathField) return;
-        if (window.mathVirtualKeyboard?.visible) return;
+    /**
+     * Android only shows the IME if a contenteditable is focused synchronously
+     * inside the tap. Standalone PWAs also ignore inputmode=none, which is
+     * MathLive's default on its hidden sink, so the native keyboard never opens
+     * and the in-app keypad was being requested too late to replace it.
+     */
+    focusNativeKeyboard = () => {
+        const field = this.mathFieldRef.current;
+        const sink = this.prepareNativeSink(field);
+        if (!field || !sink) return;
+        field.setAttribute('inputmode', 'decimal');
+        sink.setAttribute('inputmode', 'decimal');
+        sink.setAttribute('enterkeyhint', 'done');
         try {
-            mathField.focus?.();
-        } catch (e) {
-            // ignore
+            sink.focus({ preventScroll: true });
+        } catch (err) {
+            try {
+                field.focus({ preventScroll: true });
+            } catch (_) {
+                field.focus();
+            }
+        }
+    };
+
+    handleMathFieldPointerDown = (event) => {
+        if (!wantsNativeKeyboard()) return;
+        if (event.button != null && event.button !== 0) return;
+        const path = typeof event.composedPath === 'function' ? event.composedPath() : [];
+        const isBuiltInToggle = path.some((el) => {
+            const part = el?.getAttribute?.('part');
+            return (
+                el?.classList?.contains?.('ML__virtual-keyboard-toggle') ||
+                el?.classList?.contains?.('ML__menu-toggle') ||
+                part === 'virtual-keyboard-toggle' ||
+                part === 'menu-toggle'
+            );
+        });
+        if (isBuiltInToggle) return;
+        if (window.mathVirtualKeyboard?.visible) return;
+        this.focusNativeKeyboard();
+        const field = this.mathFieldRef.current;
+        if (field && typeof field.getOffsetFromPoint === 'function') {
+            try {
+                const offset = field.getOffsetFromPoint(event.clientX, event.clientY, { bias: 0 });
+                if (typeof offset === 'number' && offset >= 0) field.position = offset;
+            } catch (_) {
+                // caret placement is optional; typing still appends
+            }
+        }
+        // Stop MathLive's bubble handler from preventDefault(). That cancel is
+        // what makes Android Chrome drop the system keyboard after a tap.
+        event.stopPropagation();
+    };
+
+    toggleMathKeypad = (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        const field = this.mathFieldRef.current;
+        const sink = field?.shadowRoot?.querySelector('.ML__keyboard-sink');
+        const keypad = window.mathVirtualKeyboard;
+        if (!field || !keypad) return;
+        if (keypad.visible) {
+            hideMathKeyboardAnimated();
+            field.setAttribute('inputmode', 'decimal');
+            if (sink) {
+                sink.setAttribute('inputmode', 'decimal');
+                try {
+                    sink.focus({ preventScroll: true });
+                } catch (err) {
+                    field.focus();
+                }
+            }
+            this.setState({ mathKeypad: false });
+            return;
+        }
+        field.setAttribute('inputmode', 'none');
+        if (sink) sink.setAttribute('inputmode', 'none');
+        try {
+            field.focus({ preventScroll: true });
+        } catch (err) {
+            field.focus();
         }
         showMathKeyboardAnimated();
+        this.setState({ mathKeypad: true });
+        window.setTimeout(this.keepFieldVisible, 80);
     };
 
     handleFocus = () => {
@@ -229,11 +355,6 @@ class ProblemInput extends React.Component {
             this._blurHideTimer = null;
         }
         this.setState({ isMathFieldFocused: true });
-        // manual policy: we open explicitly; still guard against dismiss races
-        if (!isMathKeyboardShowSuppressed()) {
-            this.showMobileKeyboardIfNeeded();
-        }
-        window.setTimeout(this.keepFieldVisible, 50);
     };
 
     handleBlur = () => {
@@ -257,7 +378,6 @@ class ProblemInput extends React.Component {
             }
             return;
         }
-        this.showMobileKeyboardIfNeeded();
     };
 
     handleClickOutside = (event) => {
@@ -276,6 +396,8 @@ class ProblemInput extends React.Component {
         }) || (kbRoot && kbRoot.contains(event.target));
         const inField = path.includes(mathField)
             || (mathField && (mathField === event.target || mathField.contains?.(event.target)));
+
+        if (event.target?.closest?.('[data-math-keypad-toggle]')) return;
 
         if (!inKeyboard && !inField) {
             // Block later document listeners (MathLive) without killing the tap target's click.
@@ -350,14 +472,17 @@ class ProblemInput extends React.Component {
                 <Grid item xs={false} md={problemType === "TextBox" ? leftMd : false}/>
                 <Grid item xs={12} sm={isMobile ? 12 : 9} md={problemType === "TextBox" ? mainMd : 12}>
                     {(problemType === "TextBox" && this.props.step.answerType !== "string") && (
+                        <>
                         <math-field
                             ref={(node) => {
                                 this.mathFieldRef.current = node;
                                 if (node) this.attachMathField();
                             }}
-                            math-virtual-keyboard-policy={isMobile ? "manual" : "sandboxed"}
+                            math-virtual-keyboard-policy={isMobile || wantsNativeKeyboard() ? "manual" : "sandboxed"}
+                            inputMode={isMobile || wantsNativeKeyboard() ? "decimal" : undefined}
                             onFocus={this.handleFocus}
                             onBlur={this.handleBlur}
+                            onPointerDown={this.handleMathFieldPointerDown}
                             onPointerUp={this.handleMathFieldPointerUp}
                             style={{ display: "block" }}
                             default-value={(use_expanded_view && debug) ? correctAnswer : (state.inputVal || "")}
@@ -365,10 +490,36 @@ class ProblemInput extends React.Component {
                             autoOperatorNames={EQUATION_EDITOR_AUTO_OPERATORS}
                         >
                         </math-field>
+                        {(isMobile || wantsNativeKeyboard()) && (
+                            <button
+                                type="button"
+                                data-math-keypad-toggle="true"
+                                aria-pressed={Boolean(this.state.mathKeypad)}
+                                onPointerDown={(event) => {
+                                    if (event.button != null && event.button !== 0) return;
+                                    // Keep focus on the answer field instead of the button,
+                                    // or Android closes the keyboard.
+                                    event.preventDefault();
+                                    this.toggleMathKeypad(event);
+                                }}
+                                style={{
+                                    marginTop: 8,
+                                    minHeight: 44,
+                                    padding: "8px 12px",
+                                    borderRadius: 8,
+                                    border: "1px solid #4F86A8",
+                                    background: this.state.mathKeypad ? "#1f4b6e" : "#fff",
+                                    color: this.state.mathKeypad ? "#fff" : "#1f4b6e",
+                                    fontSize: 16,
+                                }}
+                            >
+                                {this.state.mathKeypad ? "Native keyboard" : "Math keypad"}
+                            </button>
+                        )}
+                        </>
                     )}               
                     {(problemType === "TextBox" && this.props.step.answerType === "string") && (
                         <TextField
-                            ref={this.textFieldRef}
                             inputProps={{
                                 min: 0,
                                 inputMode: "text",
@@ -378,8 +529,10 @@ class ProblemInput extends React.Component {
                                 style: { textAlign: 'center', fontSize: 16 },
                                 "aria-label": "Enter a response to the question above"
                             }}
-                            onFocus={(event) => {
-                                event.target.scrollIntoView({ block: 'center', inline: 'nearest' });
+                            onPointerDown={(event) => {
+                                const input = event.currentTarget.querySelector?.('input, textarea')
+                                    || (event.target?.matches?.('input, textarea') ? event.target : null);
+                                if (input && document.activeElement !== input) input.focus({ preventScroll: true });
                             }}
                             {...stagingProp({
                                 "data-selenium-target": `string-answer-${index}`
@@ -403,6 +556,12 @@ class ProblemInput extends React.Component {
                     {(problemType === "TextBox" && this.props.step.answerType === "short-essay") && (
                         <textarea
                             className="short-essay-input"
+                            inputMode="text"
+                            onPointerDown={(event) => {
+                                if (document.activeElement !== event.currentTarget) {
+                                    event.currentTarget.focus();
+                                }
+                            }}
                             onChange={(evt) => this.props.editInput(evt)}
                             onKeyPress={(evt) => this.props.handleKey(evt)}
                         >

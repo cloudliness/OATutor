@@ -1,4 +1,5 @@
 {
+  "id": "/",
   "short_name": "OATutor",
   "name": "OATutor",
   "description": "Adaptive math practice, from pre-algebra through calculus.",
@@ -26,6 +27,6 @@
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#f6f6f6",
+  "background_color": "#1f4b6e",
   "theme_color": "#1f4b6e"
 }

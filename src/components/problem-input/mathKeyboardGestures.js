@@ -170,11 +170,13 @@ export function hideMathKeyboardAnimated(options = {}) {
                 // ignore
             }
         }
-        hiding = false;
-        // Keep show blocked a bit longer while focus/geometry settles.
-        suppressShowUntil = Date.now() + SUPPRESS_SHOW_MS;
-        ensureShowGuard();
-    };
+    hiding = false;
+    document.body.classList.remove('oat-math-kb-open');
+    // Keep show blocked a bit longer while focus/geometry settles.
+    suppressShowUntil = Date.now() + SUPPRESS_SHOW_MS;
+    ensureShowGuard();
+    window.dispatchEvent(new CustomEvent('oat-math-kb', { detail: { open: false } }));
+  };
 
     backdrop?.addEventListener('transitionend', finish, { once: true });
     hideTimer = setTimeout(finish, ANIM_MS + 40);
@@ -220,6 +222,8 @@ export function showMathKeyboardAnimated() {
         } else {
             bindMathKeyboardDismissDrag();
         }
+        document.body.classList.add('oat-math-kb-open');
+        window.dispatchEvent(new CustomEvent('oat-math-kb', { detail: { open: true } }));
         setTimeout(() => {
             if (gen !== showGeneration || isMathKeyboardShowSuppressed()) return;
             bindMathKeyboardDismissDrag();
@@ -297,24 +301,30 @@ function onHandlePointerDown(event) {
 
 function ensureDragHandle(keyboardRoot) {
     let handle = keyboardRoot.querySelector(`.${HANDLE_CLASS}`);
-    if (handle) return handle;
-
-    handle = document.createElement('div');
-    handle.className = HANDLE_CLASS;
-    handle.setAttribute('role', 'button');
-    handle.setAttribute('aria-label', 'Drag down to close keyboard');
-    handle.addEventListener('pointerdown', onHandlePointerDown, { passive: false });
-
+    const backdrop = keyboardRoot.querySelector('.MLK__backdrop') || keyboardRoot;
     const plate = keyboardRoot.querySelector('.MLK__plate');
-    const host = plate || keyboardRoot.querySelector('.MLK__backdrop') || keyboardRoot;
-    if (getComputedStyle(host).position === 'static') {
-        host.style.position = 'relative';
+
+    if (!handle) {
+        handle = document.createElement('div');
+        handle.className = HANDLE_CLASS;
+        handle.setAttribute('role', 'button');
+        handle.setAttribute('aria-label', 'Drag down to close keyboard');
+        handle.addEventListener('pointerdown', onHandlePointerDown, { passive: false });
     }
+
+    // Sit in the padding above the keys. An absolute handle on the plate
+    // covered the top key row, so taps on digits never reached MathLive.
     handle.style.position = 'absolute';
     handle.style.top = '0';
     handle.style.left = '0';
     handle.style.right = '0';
-    host.prepend(handle);
+    handle.style.height = '28px';
+    handle.style.zIndex = '5';
+    if (handle.parentElement !== backdrop) backdrop.prepend(handle);
+    if (plate) {
+        plate.style.top = '30px';
+        plate.style.height = 'calc(100% - 36px)';
+    }
     return handle;
 }
 

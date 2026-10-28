@@ -399,10 +399,15 @@ class ProblemCard extends React.Component {
     };
 
     setInputValState = (inputVal) => {
+        const text = typeof inputVal === "string"
+            ? inputVal
+            : (inputVal && inputVal.target && typeof inputVal.target.value === "string"
+                ? inputVal.target.value
+                : "");
         this.setState(({ isCorrect }) => ({
-            inputVal,
+            inputVal: text,
             isCorrect: isCorrect ? true : null,
-            answerSelected: inputVal.trim() !== ""
+            answerSelected: text.trim() !== ""
         }));
     };
 

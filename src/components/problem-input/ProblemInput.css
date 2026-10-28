@@ -17,9 +17,28 @@ body {
     --keyboard-toolbar-font-size: 24px;
 }
 
+math-field {
+    display: block;
+    width: 100%;
+    min-height: 48px;
+    font-size: 22px;
+    padding: 8px 12px;
+    border: 1px solid #c5d0dc;
+    border-radius: 8px;
+    background: #fff;
+    color: #1a1a1a;
+    box-sizing: border-box;
+    scroll-margin-top: 80px;
+    scroll-margin-bottom: 46vh;
+}
+
 math-field::part(menu-toggle) {
     display: none;
-  }
+}
+
+body.oat-math-kb-open {
+    padding-bottom: min(48vh, 340px);
+}
 
 .react-resizable-handle {
     display: none;

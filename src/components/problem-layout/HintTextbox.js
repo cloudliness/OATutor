@@ -75,11 +75,15 @@ class HintTextbox extends React.Component {
     }
 
     setInputValState = (inputVal) => {
-        // console.debug("new inputVal state: ", inputVal)
-        this.setState(({ isCorrect }) => ({ 
-            inputVal, 
+        const text = typeof inputVal === "string"
+            ? inputVal
+            : (inputVal && inputVal.target && typeof inputVal.target.value === "string"
+                ? inputVal.target.value
+                : "");
+        this.setState(({ isCorrect }) => ({
+            inputVal: text,
             isCorrect: isCorrect ? true : null,
-            answerSelected: inputVal.trim() !== "" 
+            answerSelected: text.trim() !== ""
         }))
     }
 

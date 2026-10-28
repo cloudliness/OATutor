@@ -36,6 +36,12 @@ class ProblemInput extends React.Component {
 
     componentDidMount() {
         document.addEventListener('pointerdown', this.handleClickOutside, true);
+        window.addEventListener('oat-math-kb', this.handleKeyboardVisibility);
+        if (window.visualViewport) {
+            window.visualViewport.addEventListener('resize', this.keepFieldVisible);
+            window.visualViewport.addEventListener('scroll', this.keepFieldVisible);
+        }
+        this.attachMathField();
         this.applyKeyboardLayout();
 
         console.debug('problem', this.props.step, 'seed', this.props.seed)
@@ -58,15 +64,128 @@ class ProblemInput extends React.Component {
         if (prevProps.keyboardType !== this.props.keyboardType) {
             this.applyKeyboardLayout();
         }
+        const field = this.mathFieldRef.current;
+        if (!field) return;
+        const stepChanged = prevProps.step?.id !== this.props.step?.id
+            || prevProps.index !== this.props.index;
+        if (stepChanged) {
+            const next = typeof this.props.state?.inputVal === 'string' ? this.props.state.inputVal : '';
+            if (field.value !== next) field.value = next;
+        }
     }
 
     componentWillUnmount() {
         document.removeEventListener('pointerdown', this.handleClickOutside, true);
+        window.removeEventListener('oat-math-kb', this.handleKeyboardVisibility);
+        if (window.visualViewport) {
+            window.visualViewport.removeEventListener('resize', this.keepFieldVisible);
+            window.visualViewport.removeEventListener('scroll', this.keepFieldVisible);
+        }
         if (this._blurHideTimer) {
             clearTimeout(this._blurHideTimer);
             this._blurHideTimer = null;
         }
+        if (this._mathField && this._onMathInput) {
+            this._mathField.removeEventListener('input', this._onMathInput);
+        }
     }
+
+    attachMathField = () => {
+        const field = this.mathFieldRef.current;
+        if (!field || field.dataset.oatBound === '1') return;
+        field.dataset.oatBound = '1';
+        this._mathField = field;
+        this._onMathInput = () => this.publishMathValue(field);
+        field.addEventListener('input', this._onMathInput);
+        this.bridgeAndroidIme(field);
+        const initial = this.props.state?.inputVal;
+        if (typeof initial === 'string' && initial && field.value !== initial) {
+            field.value = initial;
+        }
+    };
+
+    publishMathValue = (field) => {
+        const next = typeof field?.value === 'string' ? field.value : '';
+        if (next !== this.props.state?.inputVal) {
+            this.props.setInputValState(next);
+        }
+    };
+
+    /**
+     * Android Chrome / Gboard delivers text through beforeinput on the hidden
+     * keyboard sink (often keyCode 229) and MathLive 0.109 sometimes drops it.
+     * If the visible value did not change, insert the character ourselves.
+     */
+    bridgeAndroidIme = (field) => {
+        const sink = field.shadowRoot?.querySelector('.ML__keyboard-sink');
+        if (!sink || sink.dataset.oatIme === '1') return;
+        sink.dataset.oatIme = '1';
+        sink.setAttribute('enterkeyhint', 'done');
+        sink.setAttribute('autocapitalize', 'off');
+
+        const syncInputMode = () => {
+            const virtualOpen = Boolean(window.mathVirtualKeyboard?.visible);
+            sink.setAttribute('inputmode', virtualOpen ? 'none' : 'text');
+        };
+        syncInputMode();
+        this._syncImeMode = syncInputMode;
+
+        const insertIfIgnored = (data) => {
+            const text = typeof data === 'string' ? data.replace(/\u200b/g, '') : '';
+            if (!text) return;
+            const before = field.value || '';
+            queueMicrotask(() => {
+                if (!field.isConnected) return;
+                if ((field.value || '') !== before) return;
+                try {
+                    field.executeCommand(['insert', text]);
+                } catch (err) {
+                    field.value = before + text;
+                }
+                sink.textContent = '';
+                this.publishMathValue(field);
+                this.keepFieldVisible();
+            });
+        };
+
+        sink.addEventListener('beforeinput', (event) => {
+            if (!event.inputType || !event.inputType.startsWith('insert')) return;
+            insertIfIgnored(event.data);
+        }, true);
+        sink.addEventListener('input', (event) => {
+            const data = event.data || sink.textContent || '';
+            insertIfIgnored(data);
+        }, true);
+        sink.addEventListener('compositionend', (event) => {
+            insertIfIgnored(event.data || sink.textContent || '');
+        }, true);
+    };
+
+    keepFieldVisible = () => {
+        const field = this.mathFieldRef.current;
+        if (!field) return;
+        const viewport = window.visualViewport;
+        const visibleTop = viewport ? viewport.offsetTop : 0;
+        const visibleBottom = viewport
+            ? viewport.offsetTop + viewport.height
+            : window.innerHeight;
+        const keyboard = document.querySelector('body > .ML__keyboard.is-visible .MLK__backdrop');
+        const keyboardTop = keyboard ? keyboard.getBoundingClientRect().top : visibleBottom;
+        const limit = Math.min(visibleBottom, keyboardTop) - 12;
+        const rect = field.getBoundingClientRect();
+        if (rect.bottom > limit || rect.top < visibleTop + 64) {
+            const delta = rect.bottom - limit + 28;
+            window.scrollBy({ top: delta, left: 0, behavior: 'smooth' });
+        }
+    };
+
+    handleKeyboardVisibility = (event) => {
+        if (this._syncImeMode) this._syncImeMode();
+        if (event?.detail?.open) {
+            window.setTimeout(this.keepFieldVisible, 60);
+            window.setTimeout(this.keepFieldVisible, 320);
+        }
+    };
 
     /**
      * Setting layouts rebuilds the MathLive keyboard DOM. Never do that from
@@ -114,6 +233,7 @@ class ProblemInput extends React.Component {
         if (!isMathKeyboardShowSuppressed()) {
             this.showMobileKeyboardIfNeeded();
         }
+        window.setTimeout(this.keepFieldVisible, 50);
     };
 
     handleBlur = () => {
@@ -147,10 +267,15 @@ class ProblemInput extends React.Component {
         const mathField = this.mathFieldRef.current;
         const kbRoot = document.querySelector('.ML__keyboard');
         const path = typeof event.composedPath === 'function' ? event.composedPath() : [];
-        const inKeyboard = path.some(
-            (el) => el?.classList?.contains?.('ML__keyboard') || el?.classList?.contains?.('oat-math-kb-drag')
-        ) || (kbRoot && kbRoot.contains(event.target));
-        const inField = mathField && (mathField === event.target || mathField.contains?.(event.target));
+        const inKeyboard = path.some((el) => {
+            const className = el?.className;
+            const text = typeof className === 'string' ? className : '';
+            return text.includes('ML__keyboard')
+                || text.includes('MLK__')
+                || text.includes('oat-math-kb-drag');
+        }) || (kbRoot && kbRoot.contains(event.target));
+        const inField = path.includes(mathField)
+            || (mathField && (mathField === event.target || mathField.contains?.(event.target)));
 
         if (!inKeyboard && !inField) {
             // Block later document listeners (MathLive) without killing the tap target's click.
@@ -226,15 +351,16 @@ class ProblemInput extends React.Component {
                 <Grid item xs={12} sm={isMobile ? 12 : 9} md={problemType === "TextBox" ? mainMd : 12}>
                     {(problemType === "TextBox" && this.props.step.answerType !== "string") && (
                         <math-field
-                            ref={this.mathFieldRef}
+                            ref={(node) => {
+                                this.mathFieldRef.current = node;
+                                if (node) this.attachMathField();
+                            }}
                             math-virtual-keyboard-policy={isMobile ? "manual" : "sandboxed"}
                             onFocus={this.handleFocus}
                             onBlur={this.handleBlur}
                             onPointerUp={this.handleMathFieldPointerUp}
-                            onInput={evt => this.props.setInputValState(evt.target.value)}
-                            style={{"display": "block"}}
-                            value={(use_expanded_view && debug) ? correctAnswer : state.inputVal}
-                            onChange={this.onEquationChange}
+                            style={{ display: "block" }}
+                            default-value={(use_expanded_view && debug) ? correctAnswer : (state.inputVal || "")}
                             autoCommands={EQUATION_EDITOR_AUTO_COMMANDS}
                             autoOperatorNames={EQUATION_EDITOR_AUTO_OPERATORS}
                         >
@@ -245,8 +371,15 @@ class ProblemInput extends React.Component {
                             ref={this.textFieldRef}
                             inputProps={{
                                 min: 0,
-                                style: { textAlign: 'center' },
+                                inputMode: "text",
+                                autoComplete: "off",
+                                autoCorrect: "off",
+                                spellCheck: "false",
+                                style: { textAlign: 'center', fontSize: 16 },
                                 "aria-label": "Enter a response to the question above"
+                            }}
+                            onFocus={(event) => {
+                                event.target.scrollIntoView({ block: 'center', inline: 'nearest' });
                             }}
                             {...stagingProp({
                                 "data-selenium-target": `string-answer-${index}`

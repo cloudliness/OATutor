@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l5p2a-h1",
+    "type": "scaffold",
+    "title": "Find 10% first, then 5%",
+    "text": "$$10\\%$$ of a number is one tenth of it. $$5\\%$$ is half of that 10%. Adding them gives 15%. A common mistake is to compute $$15 \\times 60$$. What is $$10\\%$$ of 60?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$6$$"
+    ]
+  },
+  {
+    "id": "prealg-l5p2a-h2",
+    "type": "scaffold",
+    "title": "Add half of that for the extra 5%",
+    "text": "Half of 6 is the extra $$5\\%$$. What is $$6 + 3$$?",
+    "dependencies": [
+      "prealg-l5p2a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$9$$"
+    ]
+  },
+  {
+    "id": "prealg-l5p2a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$15\\%$$ of $$60 = 0.15 \\times 60 = 9$$. Common mistake: answering $$900$$ or $$15$$. General rule: $$p\\%$$ of $$n$$ is $$\\frac{p}{100} \\times n$$. Splitting the percent into 10% and 5% is a check, not a different rule.",
+    "dependencies": [
+      "prealg-l5p2a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

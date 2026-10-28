@@ -1,0 +1,11 @@
+{
+  "id": "prealg-l1p4",
+  "title": "Place value in multi-digit arithmetic",
+  "body": "These use only whole numbers. Keep track of place value: tens are worth ten times as much as ones.",
+  "variabilization": {},
+  "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+  "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+  "lesson": "1. Whole Numbers and Order of Operations",
+  "lessonId": "prealg-lesson-1",
+  "courseName": "Pre-Algebra"
+}

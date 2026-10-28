@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l7p4a-h1",
+    "type": "scaffold",
+    "title": "Remove the added 2 first",
+    "text": "The equation adds 2 after dividing $$x$$ by 3. Subtract 2 from both sides before you multiply by 3. A common mistake is to multiply 6 by 3 and ignore the 2, getting 18. What is $$6 - 2$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$4$$"
+    ]
+  },
+  {
+    "id": "prealg-l7p4a-h2",
+    "type": "scaffold",
+    "title": "Undo the division",
+    "text": "You now have $$\\frac{x}{3} = 4$$. Multiply both sides by 3. What is $$4 \\times 3$$?",
+    "dependencies": [
+      "prealg-l7p4a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$12$$"
+    ]
+  },
+  {
+    "id": "prealg-l7p4a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$\\frac{x}{3} + 2 = 6$$. Subtract 2: $$\\frac{x}{3} = 4$$. Multiply by 3: $$x = 12$$. Check: $$\\frac{12}{3} + 2 = 6$$. Common mistake: $$x = 6 \\times 3 - 2$$ computed in the wrong order. General rule: peel off addition and subtraction before you undo multiplication or division.",
+    "dependencies": [
+      "prealg-l7p4a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

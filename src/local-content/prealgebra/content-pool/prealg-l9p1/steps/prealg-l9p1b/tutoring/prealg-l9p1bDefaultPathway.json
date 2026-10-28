@@ -1,0 +1,51 @@
+[
+  {
+    "id": "prealg-l9p1b-h1",
+    "type": "scaffold",
+    "title": "Area counts unit squares",
+    "text": "An 8 by 5 rectangle holds 5 rows of 8 unit squares. A common mistake is to add the sides and report the perimeter, 26. Which calculation is the area?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "MultipleChoice",
+    "answerType": "string",
+    "hintAnswer": [
+      "$$8 \\times 5$$"
+    ],
+    "choices": [
+      "$$8 \\times 5$$",
+      "$$8 + 5$$",
+      "$$2 \\times (8 + 5)$$"
+    ]
+  },
+  {
+    "id": "prealg-l9p1b-h2",
+    "type": "scaffold",
+    "title": "Multiply length by width",
+    "text": "What is $$8 \\times 5$$?",
+    "dependencies": [
+      "prealg-l9p1b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$40$$"
+    ]
+  },
+  {
+    "id": "prealg-l9p1b-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "Area $$= 8 \\times 5 = 40$$ square units. Common mistake: answering 26. General rule: the area of a rectangle is length times width. Do not add the sides when the question asks for area.",
+    "dependencies": [
+      "prealg-l9p1b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l8p3a",
+  "stepAnswer": [
+    "$$9$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "$$\\sqrt{81}$$",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$9$$"
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l1p1b-h1",
+    "type": "scaffold",
+    "title": "What do parentheses change?",
+    "text": "Parentheses are a grouping symbol: finish the inside before you use the result outside. A common mistake is to multiply $$2 \\times 3$$ first and ignore the parentheses. What is $$8 + 2$$, the value inside the parentheses?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$10$$"
+    ]
+  },
+  {
+    "id": "prealg-l1p1b-h2",
+    "type": "scaffold",
+    "title": "Use that result as a factor",
+    "text": "The parentheses are now a single factor of 10. Multiplication is next. What is $$10 \\times 3$$?",
+    "dependencies": [
+      "prealg-l1p1b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$30$$"
+    ]
+  },
+  {
+    "id": "prealg-l1p1b-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$(8 + 2) \\times 3 = 10 \\times 3 = 30$$. Common mistake: multiplying before adding inside the parentheses, which gives $$8 + 6 = 14$$. General rule: evaluate inside parentheses first, then use that number in the remaining expression.",
+    "dependencies": [
+      "prealg-l1p1b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

@@ -55,6 +55,7 @@ class TTSPlayer {
      */
     async fetchAudio(segments) {
         if (this._destroyed) return false;
+        if (!TTS_API_URL) return false;
         if (!segments || segments.length === 0) return false;
 
         try {

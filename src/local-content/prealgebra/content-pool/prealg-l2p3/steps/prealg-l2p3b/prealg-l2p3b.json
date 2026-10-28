@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l2p3b",
+  "stepAnswer": [
+    "$$-9$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "$$-3^{2}$$",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$-9$$"
+}

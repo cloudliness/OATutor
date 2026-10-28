@@ -1,0 +1,218 @@
+{
+  "prealg-l1p1a": [
+    "prealg_order_of_operations"
+  ],
+  "prealg-l1p1b": [
+    "prealg_whole_number_operations"
+  ],
+  "prealg-l1p2a": [
+    "prealg_order_of_operations"
+  ],
+  "prealg-l1p2b": [
+    "prealg_order_of_operations"
+  ],
+  "prealg-l1p3a": [
+    "prealg_order_of_operations"
+  ],
+  "prealg-l1p3b": [
+    "prealg_whole_number_operations"
+  ],
+  "prealg-l1p4a": [
+    "prealg_whole_number_operations"
+  ],
+  "prealg-l1p4b": [
+    "prealg_whole_number_operations"
+  ],
+  "prealg-l2p1a": [
+    "prealg_integer_add_sub"
+  ],
+  "prealg-l2p1b": [
+    "prealg_integer_add_sub"
+  ],
+  "prealg-l2p2a": [
+    "prealg_integer_mul_div"
+  ],
+  "prealg-l2p2b": [
+    "prealg_integer_mul_div"
+  ],
+  "prealg-l2p3a": [
+    "prealg_integer_mul_div"
+  ],
+  "prealg-l2p3b": [
+    "prealg_integer_mul_div"
+  ],
+  "prealg-l2p4a": [
+    "prealg_integer_add_sub"
+  ],
+  "prealg-l2p4b": [
+    "prealg_integer_mul_div"
+  ],
+  "prealg-l3p1a": [
+    "prealg_simplify_multiply_fractions"
+  ],
+  "prealg-l3p1b": [
+    "prealg_simplify_multiply_fractions"
+  ],
+  "prealg-l3p2a": [
+    "prealg_simplify_multiply_fractions"
+  ],
+  "prealg-l3p2b": [
+    "prealg_add_subtract_fractions"
+  ],
+  "prealg-l3p3a": [
+    "prealg_add_subtract_fractions"
+  ],
+  "prealg-l3p3b": [
+    "prealg_add_subtract_fractions"
+  ],
+  "prealg-l3p4a": [
+    "prealg_simplify_multiply_fractions"
+  ],
+  "prealg-l3p4b": [
+    "prealg_add_subtract_fractions"
+  ],
+  "prealg-l4p1a": [
+    "prealg_decimal_place_value"
+  ],
+  "prealg-l4p1b": [
+    "prealg_decimal_operations"
+  ],
+  "prealg-l4p2a": [
+    "prealg_decimal_operations"
+  ],
+  "prealg-l4p2b": [
+    "prealg_decimal_operations"
+  ],
+  "prealg-l4p3a": [
+    "prealg_decimal_operations"
+  ],
+  "prealg-l4p3b": [
+    "prealg_decimal_place_value"
+  ],
+  "prealg-l4p4a": [
+    "prealg_decimal_operations"
+  ],
+  "prealg-l4p4b": [
+    "prealg_decimal_place_value"
+  ],
+  "prealg-l5p1a": [
+    "prealg_percent_of_number"
+  ],
+  "prealg-l5p1b": [
+    "prealg_percent_conversions"
+  ],
+  "prealg-l5p2a": [
+    "prealg_percent_of_number"
+  ],
+  "prealg-l5p2b": [
+    "prealg_percent_conversions"
+  ],
+  "prealg-l5p3a": [
+    "prealg_percent_of_number"
+  ],
+  "prealg-l5p3b": [
+    "prealg_percent_of_number"
+  ],
+  "prealg-l5p4a": [
+    "prealg_percent_of_number"
+  ],
+  "prealg-l5p4b": [
+    "prealg_percent_of_number"
+  ],
+  "prealg-l6p1a": [
+    "prealg_ratios_rates"
+  ],
+  "prealg-l6p1b": [
+    "prealg_ratios_rates"
+  ],
+  "prealg-l6p2a": [
+    "prealg_ratios_rates"
+  ],
+  "prealg-l6p2b": [
+    "prealg_proportions"
+  ],
+  "prealg-l6p3a": [
+    "prealg_proportions"
+  ],
+  "prealg-l6p3b": [
+    "prealg_ratios_rates"
+  ],
+  "prealg-l6p4a": [
+    "prealg_proportions"
+  ],
+  "prealg-l6p4b": [
+    "prealg_ratios_rates"
+  ],
+  "prealg-l7p1a": [
+    "prealg_one_step_equations"
+  ],
+  "prealg-l7p1b": [
+    "prealg_one_step_equations"
+  ],
+  "prealg-l7p2a": [
+    "prealg_one_step_equations"
+  ],
+  "prealg-l7p2b": [
+    "prealg_one_step_equations"
+  ],
+  "prealg-l7p3a": [
+    "prealg_two_step_equations"
+  ],
+  "prealg-l7p3b": [
+    "prealg_two_step_equations"
+  ],
+  "prealg-l7p4a": [
+    "prealg_two_step_equations"
+  ],
+  "prealg-l7p4b": [
+    "prealg_two_step_equations"
+  ],
+  "prealg-l8p1a": [
+    "prealg_exponents"
+  ],
+  "prealg-l8p1b": [
+    "prealg_exponents"
+  ],
+  "prealg-l8p2a": [
+    "prealg_exponents"
+  ],
+  "prealg-l8p2b": [
+    "prealg_exponents"
+  ],
+  "prealg-l8p3a": [
+    "prealg_square_roots"
+  ],
+  "prealg-l8p3b": [
+    "prealg_square_roots"
+  ],
+  "prealg-l8p4a": [
+    "prealg_square_roots"
+  ],
+  "prealg-l8p4b": [
+    "prealg_square_roots"
+  ],
+  "prealg-l9p1a": [
+    "prealg_perimeter_area"
+  ],
+  "prealg-l9p1b": [
+    "prealg_perimeter_area"
+  ],
+  "prealg-l9p2a": [
+    "prealg_perimeter_area"
+  ],
+  "prealg-l9p2b": [
+    "prealg_perimeter_area"
+  ],
+  "prealg-l9p3a": [
+    "prealg_measurement"
+  ],
+  "prealg-l9p3b": [
+    "prealg_measurement"
+  ],
+  "prealg-l9p4a": [
+    "prealg_perimeter_area"
+  ],
+  "prealg-l9p4b": [
+    "prealg_measurement"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "prealg-l1p3",
+  "title": "Same priority, left to right",
+  "body": "Multiplication and division have the same priority. So do addition and subtraction. Work those pairs from left to right.",
+  "variabilization": {},
+  "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+  "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+  "lesson": "1. Whole Numbers and Order of Operations",
+  "lessonId": "prealg-lesson-1",
+  "courseName": "Pre-Algebra"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l9p1a",
+  "stepAnswer": [
+    "$$26$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "What is the perimeter of a rectangle that is 8 by 5?",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$26$$"
+}

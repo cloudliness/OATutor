@@ -1,0 +1,51 @@
+[
+  {
+    "id": "prealg-l7p1a-h1",
+    "type": "scaffold",
+    "title": "What undoes adding 9?",
+    "text": "The variable has 9 added to it. The inverse operation is subtraction of 9, and it has to happen on both sides or the two sides stop being equal. A common mistake is to subtract 9 from the left only, or to add 9 to 14. Which operation undoes $$+ 9$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "MultipleChoice",
+    "answerType": "string",
+    "hintAnswer": [
+      "Subtract 9 from both sides"
+    ],
+    "choices": [
+      "Subtract 9 from both sides",
+      "Add 9 to both sides",
+      "Divide both sides by 9"
+    ]
+  },
+  {
+    "id": "prealg-l7p1a-h2",
+    "type": "scaffold",
+    "title": "Apply it to the right side",
+    "text": "The left side becomes $$x$$. The right side becomes $$14 - 9$$. What is $$14 - 9$$?",
+    "dependencies": [
+      "prealg-l7p1a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$5$$"
+    ]
+  },
+  {
+    "id": "prealg-l7p1a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$x + 9 = 14$$. Subtract 9 from both sides: $$x = 5$$. Check: $$5 + 9 = 14$$. Common mistake: adding 9 to 14 and answering 23. General rule: undo addition by subtracting the same number from both sides. Then substitute to check.",
+    "dependencies": [
+      "prealg-l7p1a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l6p4b",
+  "stepAnswer": [
+    "$$30$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "A car uses 6 gallons of fuel to travel 180 miles. How many miles per gallon is that?",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$30$$"
+}

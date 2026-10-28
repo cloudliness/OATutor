@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l9p1a-h1",
+    "type": "scaffold",
+    "title": "Which sides do you add?",
+    "text": "A rectangle has two lengths and two widths. The perimeter is $$8 + 5 + 8 + 5$$, or $$2 \\times (8 + 5)$$. A common mistake is to multiply $$8 \\times 5$$, which is the area, or to add $$8 + 5$$ only once. What is $$8 + 5$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$13$$"
+    ]
+  },
+  {
+    "id": "prealg-l9p1a-h2",
+    "type": "scaffold",
+    "title": "Double that sum",
+    "text": "Both pairs of sides are included when you multiply by 2. What is $$2 \\times 13$$?",
+    "dependencies": [
+      "prealg-l9p1a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$26$$"
+    ]
+  },
+  {
+    "id": "prealg-l9p1a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "Perimeter $$= 2 \\times (8 + 5) = 26$$. Common mistake: answering 40, the area, or 13, only half the boundary. General rule: the perimeter of a rectangle is $$2l + 2w$$. Area is a different measurement, $$l \\times w$$, and it uses square units.",
+    "dependencies": [
+      "prealg-l9p1a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

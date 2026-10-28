@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l1p4a-h1",
+    "type": "scaffold",
+    "title": "What does the trailing zero tell you?",
+    "text": "$$20 = 2 \\times 10$$. Multiplying by 10 shifts every digit one place to the left (append a zero). A common mistake is to multiply $$46 \\times 2$$ and forget to account for the ten. What is $$46 \\times 2$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$92$$"
+    ]
+  },
+  {
+    "id": "prealg-l1p4a-h2",
+    "type": "scaffold",
+    "title": "Attach the factor of 10",
+    "text": "Multiplying 92 by 10 moves 92 into the tens. What is $$92 \\times 10$$?",
+    "dependencies": [
+      "prealg-l1p4a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$920$$"
+    ]
+  },
+  {
+    "id": "prealg-l1p4a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$46 \\times 20 = 46 \\times 2 \\times 10 = 92 \\times 10 = 920$$. Common mistake: writing 92, or writing 9200 because both factors 'look like' they add a zero. General rule: separate the trailing zeros, multiply the remaining whole numbers, then put the zeros back.",
+    "dependencies": [
+      "prealg-l1p4a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "id": "prealg-l4p4",
+  "title": "Another product, and multiplying by a power of ten",
+  "body": "Count decimal places. Multiplying by 100 moves the decimal point two places to the right.",
+  "variabilization": {},
+  "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+  "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+  "lesson": "4. Decimals",
+  "lessonId": "prealg-lesson-4",
+  "courseName": "Pre-Algebra"
+}

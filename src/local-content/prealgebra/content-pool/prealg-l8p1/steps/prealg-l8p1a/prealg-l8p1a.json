@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l8p1a",
+  "stepAnswer": [
+    "$$32$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "$$2^{5}$$",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$32$$"
+}

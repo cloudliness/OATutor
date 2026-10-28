@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l6p3a",
+  "stepAnswer": [
+    "$$5$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "A recipe uses 2 cups of flour for 12 cookies. How many cups of flour make 30 cookies at the same rate?",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$5$$"
+}

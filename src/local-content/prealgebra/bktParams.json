@@ -1,0 +1,110 @@
+{
+  "prealg_order_of_operations": {
+    "probMastery": 0.1,
+    "probTransit": 0.1,
+    "probSlip": 0.1,
+    "probGuess": 0.1
+  },
+  "prealg_whole_number_operations": {
+    "probMastery": 0.1,
+    "probTransit": 0.1,
+    "probSlip": 0.1,
+    "probGuess": 0.1
+  },
+  "prealg_integer_add_sub": {
+    "probMastery": 0.1,
+    "probTransit": 0.1,
+    "probSlip": 0.1,
+    "probGuess": 0.1
+  },
+  "prealg_integer_mul_div": {
+    "probMastery": 0.1,
+    "probTransit": 0.1,
+    "probSlip": 0.1,
+    "probGuess": 0.1
+  },
+  "prealg_simplify_multiply_fractions": {
+    "probMastery": 0.1,
+    "probTransit": 0.1,
+    "probSlip": 0.1,
+    "probGuess": 0.1
+  },
+  "prealg_add_subtract_fractions": {
+    "probMastery": 0.1,
+    "probTransit": 0.1,
+    "probSlip": 0.1,
+    "probGuess": 0.1
+  },
+  "prealg_decimal_place_value": {
+    "probMastery": 0.1,
+    "probTransit": 0.1,
+    "probSlip": 0.1,
+    "probGuess": 0.1
+  },
+  "prealg_decimal_operations": {
+    "probMastery": 0.1,
+    "probTransit": 0.1,
+    "probSlip": 0.1,
+    "probGuess": 0.1
+  },
+  "prealg_percent_conversions": {
+    "probMastery": 0.1,
+    "probTransit": 0.1,
+    "probSlip": 0.1,
+    "probGuess": 0.1
+  },
+  "prealg_percent_of_number": {
+    "probMastery": 0.1,
+    "probTransit": 0.1,
+    "probSlip": 0.1,
+    "probGuess": 0.1
+  },
+  "prealg_ratios_rates": {
+    "probMastery": 0.1,
+    "probTransit": 0.1,
+    "probSlip": 0.1,
+    "probGuess": 0.1
+  },
+  "prealg_proportions": {
+    "probMastery": 0.1,
+    "probTransit": 0.1,
+    "probSlip": 0.1,
+    "probGuess": 0.1
+  },
+  "prealg_one_step_equations": {
+    "probMastery": 0.1,
+    "probTransit": 0.1,
+    "probSlip": 0.1,
+    "probGuess": 0.1
+  },
+  "prealg_two_step_equations": {
+    "probMastery": 0.1,
+    "probTransit": 0.1,
+    "probSlip": 0.1,
+    "probGuess": 0.1
+  },
+  "prealg_exponents": {
+    "probMastery": 0.1,
+    "probTransit": 0.1,
+    "probSlip": 0.1,
+    "probGuess": 0.1
+  },
+  "prealg_square_roots": {
+    "probMastery": 0.1,
+    "probTransit": 0.1,
+    "probSlip": 0.1,
+    "probGuess": 0.1
+  },
+  "prealg_perimeter_area": {
+    "probMastery": 0.1,
+    "probTransit": 0.1,
+    "probSlip": 0.1,
+    "probGuess": 0.1
+  },
+  "prealg_measurement": {
+    "probMastery": 0.1,
+    "probTransit": 0.1,
+    "probSlip": 0.1,
+    "probGuess": 0.1
+  }
+}

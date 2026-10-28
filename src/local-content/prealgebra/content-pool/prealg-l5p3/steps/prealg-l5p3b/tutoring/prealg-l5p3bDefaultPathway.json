@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l5p3b-h1",
+    "type": "scaffold",
+    "title": "What does 200% mean as a factor?",
+    "text": "$$100\\%$$ of a number is the number itself. $$200\\%$$ means $$\\frac{200}{100}$$ times the number. A common mistake is to think a percent cannot be larger than 100, or to add 200. What is $$200 \\div 100$$, the factor you will multiply by?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$2$$"
+    ]
+  },
+  {
+    "id": "prealg-l5p3b-h2",
+    "type": "scaffold",
+    "title": "Multiply by that factor",
+    "text": "What is $$2 \\times 35$$?",
+    "dependencies": [
+      "prealg-l5p3b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$70$$"
+    ]
+  },
+  {
+    "id": "prealg-l5p3b-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$200\\%$$ of $$35 = 2 \\times 35 = 70$$. Common mistake: answering $$35$$ or $$235$$. General rule: $$p\\%$$ is the factor $$\\frac{p}{100}$$, and that factor can be greater than 1.",
+    "dependencies": [
+      "prealg-l5p3b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

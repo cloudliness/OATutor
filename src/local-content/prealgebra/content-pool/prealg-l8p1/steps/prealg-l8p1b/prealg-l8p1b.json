@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l8p1b",
+  "stepAnswer": [
+    "$$1000$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "$$10^{3}$$",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$1000$$"
+}

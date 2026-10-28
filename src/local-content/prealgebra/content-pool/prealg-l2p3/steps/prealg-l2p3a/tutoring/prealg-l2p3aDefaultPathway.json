@@ -1,0 +1,50 @@
+[
+  {
+    "id": "prealg-l2p3a-h1",
+    "type": "scaffold",
+    "title": "Is the sign inside the base?",
+    "text": "The parentheses include the minus sign in the base, so you multiply $$-3$$ by $$-3$$. A common mistake is to square only the 3 and then make the answer negative. Two negative factors have which kind of product?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "MultipleChoice",
+    "answerType": "string",
+    "hintAnswer": [
+      "Positive"
+    ],
+    "choices": [
+      "Positive",
+      "Negative"
+    ]
+  },
+  {
+    "id": "prealg-l2p3a-h2",
+    "type": "scaffold",
+    "title": "Multiply the absolute values",
+    "text": "The sign is settled. What is $$3 \\times 3$$?",
+    "dependencies": [
+      "prealg-l2p3a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$9$$"
+    ]
+  },
+  {
+    "id": "prealg-l2p3a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$(-3)^{2} = (-3) \\times (-3) = 9$$. Common mistake: answering $$-9$$, which is the value of $$-3^{2}$$ without parentheses. General rule: a negative base in parentheses, raised to an even power, is positive, because the minus signs pair up.",
+    "dependencies": [
+      "prealg-l2p3a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

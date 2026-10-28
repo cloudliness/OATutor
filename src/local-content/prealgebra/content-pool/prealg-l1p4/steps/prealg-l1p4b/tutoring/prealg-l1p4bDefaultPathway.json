@@ -1,0 +1,63 @@
+[
+  {
+    "id": "prealg-l1p4b-h1",
+    "type": "scaffold",
+    "title": "Split the dividend by place value",
+    "text": "$$735 = 700 + 35$$, and both parts are divisible by 5. A common mistake is to divide only 35 and forget the hundreds. What is $$700 \\div 5$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$140$$"
+    ]
+  },
+  {
+    "id": "prealg-l1p4b-h2",
+    "type": "scaffold",
+    "title": "Divide the rest",
+    "text": "What is $$35 \\div 5$$?",
+    "dependencies": [
+      "prealg-l1p4b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$7$$"
+    ]
+  },
+  {
+    "id": "prealg-l1p4b-h3",
+    "type": "scaffold",
+    "title": "Add the partial quotients",
+    "text": "The quotient is $$140 + 7$$. What is that sum?",
+    "dependencies": [
+      "prealg-l1p4b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$147$$"
+    ]
+  },
+  {
+    "id": "prealg-l1p4b-h4",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$735 \\div 5 = 700 \\div 5 + 35 \\div 5 = 140 + 7 = 147$$. Check: $$147 \\times 5 = 735$$. Common mistake: dividing digit by digit without place value and getting 117 or 17. General rule: you can split a dividend into parts that divide evenly, divide each part, and add the quotients.",
+    "dependencies": [
+      "prealg-l1p4b-h3"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

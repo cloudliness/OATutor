@@ -1,0 +1,11 @@
+{
+  "id": "prealg-l6p3",
+  "title": "Scale a recipe, then a unit price",
+  "body": "Keep the ratio of ingredients, or of dollars to items, the same.",
+  "variabilization": {},
+  "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+  "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+  "lesson": "6. Ratios, Rates, and Proportions",
+  "lessonId": "prealg-lesson-6",
+  "courseName": "Pre-Algebra"
+}

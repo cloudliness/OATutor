@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l3p4a",
+  "stepAnswer": [
+    "$$1$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "$$1\\frac{1}{2} \\times \\frac{2}{3}$$",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$1$$"
+}

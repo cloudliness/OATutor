@@ -1,0 +1,50 @@
+[
+  {
+    "id": "prealg-l9p4a-h1",
+    "type": "scaffold",
+    "title": "Which formula is area?",
+    "text": "Area of a rectangle is length times width. Perimeter would be $$2 \\times (12 + 7) = 38$$, and that is not what was asked. A common mistake is to report the perimeter. Which expression is the area?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "MultipleChoice",
+    "answerType": "string",
+    "hintAnswer": [
+      "$$12 \\times 7$$"
+    ],
+    "choices": [
+      "$$12 \\times 7$$",
+      "$$2 \\times (12 + 7)$$"
+    ]
+  },
+  {
+    "id": "prealg-l9p4a-h2",
+    "type": "scaffold",
+    "title": "Multiply the sides",
+    "text": "What is $$12 \\times 7$$?",
+    "dependencies": [
+      "prealg-l9p4a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$84$$"
+    ]
+  },
+  {
+    "id": "prealg-l9p4a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "Area $$= 12 \\times 7 = 84$$ square feet. Common mistake: answering 38. General rule: area of a rectangle is $$l \\times w$$ in square units. If the question says 'around' or 'fence,' it wants perimeter instead.",
+    "dependencies": [
+      "prealg-l9p4a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

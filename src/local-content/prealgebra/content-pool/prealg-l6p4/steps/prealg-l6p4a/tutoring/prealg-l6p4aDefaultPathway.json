@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l6p4a-h1",
+    "type": "scaffold",
+    "title": "The numerators grew by what factor?",
+    "text": "15 is 3 times 5, so the denominators must grow by that same factor if the ratios are equal. A common mistake is to cross-multiply and then divide by the wrong term. What factor takes the numerator 5 to the numerator 15?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$3$$"
+    ]
+  },
+  {
+    "id": "prealg-l6p4a-h2",
+    "type": "scaffold",
+    "title": "Scale the denominator by that factor",
+    "text": "What is $$8 \\times 3$$?",
+    "dependencies": [
+      "prealg-l6p4a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$24$$"
+    ]
+  },
+  {
+    "id": "prealg-l6p4a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$\\frac{5}{8} = \\frac{15}{x}$$ gives $$x = 24$$, because $$5 \\times 24 = 120$$ and $$8 \\times 15 = 120$$. Common mistake: answering $$x = \\frac{8}{3}$$ by inverting the scale factor. General rule: if the numerators are in a factor of $$k$$, the denominators are in the same factor. Equivalently, cross-multiply and divide by the coefficient of the variable.",
+    "dependencies": [
+      "prealg-l6p4a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

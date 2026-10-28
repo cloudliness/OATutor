@@ -1,0 +1,11 @@
+{
+  "id": "prealg-l9p3",
+  "title": "Convert feet and hours",
+  "body": "Convert by multiplying by a rate that equals 1, such as $$\\frac{12\\text{ in}}{1\\text{ ft}}$$.",
+  "variabilization": {},
+  "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+  "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+  "lesson": "9. Geometry and Measurement",
+  "lessonId": "prealg-lesson-9",
+  "courseName": "Pre-Algebra"
+}

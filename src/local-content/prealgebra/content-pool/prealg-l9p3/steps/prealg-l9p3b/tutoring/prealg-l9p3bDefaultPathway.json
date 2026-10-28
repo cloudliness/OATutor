@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l9p3b-h1",
+    "type": "scaffold",
+    "title": "Split 2.5 hours",
+    "text": "2 hours is $$2 \\times 60$$ minutes, and 0.5 hour is half of 60 minutes. A common mistake is to multiply 2.5 by 100, as if time were metric, or to answer 2.5. What is $$2 \\times 60$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$120$$"
+    ]
+  },
+  {
+    "id": "prealg-l9p3b-h2",
+    "type": "scaffold",
+    "title": "Add the half hour",
+    "text": "Half of 60 is 30. What is $$120 + 30$$?",
+    "dependencies": [
+      "prealg-l9p3b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$150$$"
+    ]
+  },
+  {
+    "id": "prealg-l9p3b-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$2.5 \\times 60 = 150$$ minutes. Common mistake: $$2.5 \\times 100 = 250$$, or forgetting the half hour and answering 120. General rule: 1 hour = 60 minutes, so multiply hours by 60. Half an hour is 30 minutes, not 50.",
+    "dependencies": [
+      "prealg-l9p3b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l7p4b-h1",
+    "type": "scaffold",
+    "title": "Divide by the factor outside the parentheses",
+    "text": "5 multiplies the whole group $$(y - 1)$$. Divide both sides by 5 first, or expand to $$5y - 5 = 20$$ and then undo the subtraction. Both paths work. A common mistake is to subtract 1 from 20 before dealing with the 5. What is $$20 \\div 5$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$4$$"
+    ]
+  },
+  {
+    "id": "prealg-l7p4b-h2",
+    "type": "scaffold",
+    "title": "Undo the subtraction inside",
+    "text": "You now have $$y - 1 = 4$$. What is $$4 + 1$$?",
+    "dependencies": [
+      "prealg-l7p4b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$5$$"
+    ]
+  },
+  {
+    "id": "prealg-l7p4b-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$5(y - 1) = 20$$. Divide by 5: $$y - 1 = 4$$. Add 1: $$y = 5$$. Check: $$5(5 - 1) = 20$$. Expanding instead: $$5y - 5 = 20$$, $$5y = 25$$, $$y = 5$$. Common mistake: $$y - 1 = 20 - 5$$. General rule: a factor outside parentheses multiplies every term inside. Divide by that factor, or distribute, and then solve the resulting equation.",
+    "dependencies": [
+      "prealg-l7p4b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

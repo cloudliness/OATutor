@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l9p4b",
+  "stepAnswer": [
+    "$$450$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "How many centimeters are in 4.5 meters?",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$450$$"
+}

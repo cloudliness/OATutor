@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l6p3b",
+  "stepAnswer": [
+    "$$3$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "6 notebooks cost $$\\$18$$. What is the cost in dollars of one notebook?",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$3$$"
+}

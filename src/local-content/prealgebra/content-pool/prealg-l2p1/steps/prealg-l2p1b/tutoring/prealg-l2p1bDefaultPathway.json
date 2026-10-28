@@ -1,0 +1,50 @@
+[
+  {
+    "id": "prealg-l2p1b-h1",
+    "type": "scaffold",
+    "title": "What does subtracting a negative mean?",
+    "text": "Subtracting a number means adding its opposite. The opposite of $$-5$$ is positive 5, so this is not the same as $$-12 - 5$$. A common mistake is to move further left and answer $$-17$$. Subtracting $$-5$$ is the same as which operation?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "MultipleChoice",
+    "answerType": "string",
+    "hintAnswer": [
+      "Adding positive 5"
+    ],
+    "choices": [
+      "Adding positive 5",
+      "Subtracting positive 5"
+    ]
+  },
+  {
+    "id": "prealg-l2p1b-h2",
+    "type": "scaffold",
+    "title": "Rewrite, then add",
+    "text": "The expression is now $$-12 + 5$$. The signs are opposite and 12 is larger, so the result stays negative. The distance that remains is $$12 - 5$$. What is $$12 - 5$$?",
+    "dependencies": [
+      "prealg-l2p1b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$7$$"
+    ]
+  },
+  {
+    "id": "prealg-l2p1b-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$-12 - (-5) = -12 + 5 = -7$$. Common mistake: $$ -12 - 5 = -17 $$, which subtracts a positive instead of a negative. General rule: $$a - (-b) = a + b$$. Subtracting a negative moves you in the positive direction.",
+    "dependencies": [
+      "prealg-l2p1b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

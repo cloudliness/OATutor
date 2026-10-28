@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l6p2b-h1",
+    "type": "scaffold",
+    "title": "What factor turns 5 into 20?",
+    "text": "The denominators are 5 and 20. $$20 = 5 \\times 4$$, so the second fraction is the first scaled by 4. The numerator must be scaled by the same factor, or the ratios are not equal. A common mistake is to add 15 to the numerator because the denominator grew by 15. What is $$20 \\div 5$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$4$$"
+    ]
+  },
+  {
+    "id": "prealg-l6p2b-h2",
+    "type": "scaffold",
+    "title": "Scale the numerator by that factor",
+    "text": "What is $$3 \\times 4$$?",
+    "dependencies": [
+      "prealg-l6p2b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$12$$"
+    ]
+  },
+  {
+    "id": "prealg-l6p2b-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$\\frac{3}{5} = \\frac{x}{20}$$ gives $$x = 3 \\times 4 = 12$$. Cross-multiplying: $$5x = 60$$, so $$x = 12$$. Common mistake: answering $$x = 15$$ by subtracting the denominators. General rule: in a proportion, both parts of the ratio scale by the same factor. Cross-multiplying is that fact written as $$ad = bc$$ for $$\\frac{a}{b} = \\frac{c}{d}$$.",
+    "dependencies": [
+      "prealg-l6p2b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

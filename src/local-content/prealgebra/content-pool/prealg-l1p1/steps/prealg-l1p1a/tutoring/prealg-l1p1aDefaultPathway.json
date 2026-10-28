@@ -1,0 +1,67 @@
+[
+  {
+    "id": "prealg-l1p1a-h1",
+    "type": "scaffold",
+    "title": "Which operation comes first?",
+    "text": "Order of operations: multiplication and division are done before addition and subtraction, unless parentheses say otherwise. A common mistake is to add $$6 + 4$$ first just because those numbers are written on the left. In $$6 + 4 \\times 5$$, which operation do you do first?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "MultipleChoice",
+    "answerType": "string",
+    "hintAnswer": [
+      "Multiplication"
+    ],
+    "choices": [
+      "Addition",
+      "Multiplication"
+    ]
+  },
+  {
+    "id": "prealg-l1p1a-h2",
+    "type": "scaffold",
+    "title": "Compute the product",
+    "text": "The factor pair that must be combined first is $$4 \\times 5$$. That product is what you will add to 6. What is $$4 \\times 5$$?",
+    "dependencies": [
+      "prealg-l1p1a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$20$$"
+    ]
+  },
+  {
+    "id": "prealg-l1p1a-h3",
+    "type": "scaffold",
+    "title": "Add the remaining term",
+    "text": "The expression is now $$6$$ plus that product. Addition is the lower-priority operation, so it happens second. What is $$6 + 20$$?",
+    "dependencies": [
+      "prealg-l1p1a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$26$$"
+    ]
+  },
+  {
+    "id": "prealg-l1p1a-h4",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$6 + 4 \\times 5 = 6 + 20 = 26$$. Common mistake: adding $$6 + 4$$ first to get $$10 \\times 5 = 50$$. General rule: when multiplication and addition are both present, multiply first, then add.",
+    "dependencies": [
+      "prealg-l1p1a-h3"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

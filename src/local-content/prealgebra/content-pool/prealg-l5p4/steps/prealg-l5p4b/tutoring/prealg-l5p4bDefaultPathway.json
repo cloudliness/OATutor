@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l5p4b-h1",
+    "type": "scaffold",
+    "title": "What is 10% of 50?",
+    "text": "An increase adds a percent of the original amount. It does not add 10 unless 10% of the original happens to be 10. A common mistake is to answer 60. What is $$0.10 \\times 50$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$5$$"
+    ]
+  },
+  {
+    "id": "prealg-l5p4b-h2",
+    "type": "scaffold",
+    "title": "Add the increase to the original",
+    "text": "What is $$50 + 5$$?",
+    "dependencies": [
+      "prealg-l5p4b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$55$$"
+    ]
+  },
+  {
+    "id": "prealg-l5p4b-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$50$$ increased by $$10\\%$$ is $$50 + 5 = 55$$. The one-step version is $$1.10 \\times 50 = 55$$. Common mistake: adding 10 to get 60. General rule: a $$p\\%$$ increase multiplies the original by $$1 + \\frac{p}{100}$$.",
+    "dependencies": [
+      "prealg-l5p4b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

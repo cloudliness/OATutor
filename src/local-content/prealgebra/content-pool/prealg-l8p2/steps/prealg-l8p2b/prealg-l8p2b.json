@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l8p2b",
+  "stepAnswer": [
+    "$$64$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "$$(2^{3})^{2}$$",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$64$$"
+}

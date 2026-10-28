@@ -1,0 +1,63 @@
+[
+  {
+    "id": "prealg-l3p3b-h1",
+    "type": "scaffold",
+    "title": "Turn the mixed numbers into improper fractions",
+    "text": "$$2\\frac{1}{3}$$ means $$2 + \\frac{1}{3}$$, which is $$\\frac{6}{3} + \\frac{1}{3} = \\frac{7}{3}$$. A common mistake is to add the whole numbers and the fractions separately and then forget to simplify across, or to add the whole number to the denominator. $$1\\frac{1}{2} = \\frac{3}{2}$$. What is the least common denominator of 3 and 2?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$6$$"
+    ]
+  },
+  {
+    "id": "prealg-l3p3b-h2",
+    "type": "scaffold",
+    "title": "Rewrite $$\\frac{7}{3}$$ with denominator 6",
+    "text": "3 goes into 6 twice, so the numerator 7 is multiplied by 2. What is the new numerator?",
+    "dependencies": [
+      "prealg-l3p3b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$14$$"
+    ]
+  },
+  {
+    "id": "prealg-l3p3b-h3",
+    "type": "scaffold",
+    "title": "Rewrite $$\\frac{3}{2}$$ and add",
+    "text": "$$\\frac{3}{2} = \\frac{9}{6}$$. Add $$\\frac{14}{6} + \\frac{9}{6}$$. What is the numerator of the sum?",
+    "dependencies": [
+      "prealg-l3p3b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$23$$"
+    ]
+  },
+  {
+    "id": "prealg-l3p3b-h4",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$2\\frac{1}{3} + 1\\frac{1}{2} = \\frac{7}{3} + \\frac{3}{2} = \\frac{14}{6} + \\frac{9}{6} = \\frac{23}{6}$$. Common mistake: adding the whole numbers to get 3 and the fractions to get $$\\frac{2}{5}$$, then writing $$3\\frac{2}{5}$$. The fraction parts did not have a common denominator, so that sum is wrong. General rule: convert mixed numbers to improper fractions, use a common denominator, then add.",
+    "dependencies": [
+      "prealg-l3p3b-h3"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

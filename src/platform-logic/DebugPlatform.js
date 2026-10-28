@@ -7,9 +7,9 @@ import ProblemWrapper from "@components/problem-layout/ProblemWrapper.js";
 import { ThemeContext } from '../config/config.js';
 import Box from "@material-ui/core/Box";
 import BrandLogoNav from "@components/BrandLogoNav";
-import { CONTENT_SOURCE } from "@common/global-config";
+import { loadProblemPool } from "../content/loadProblemPool";
 
-let problemPool = require(`@generated/processed-content-pool/${CONTENT_SOURCE}.json`)
+let problemPool = [];
 
 let seed = Date.now().toString();
 console.log("Generated seed");
@@ -26,9 +26,18 @@ class DebugPlatform extends React.Component {
         this.completedProbs = new Set();
         this.lesson = null;
 
+        context.problemID = this.props.problemID
+        this.state = {
+            currProblem: null,
+            status: "loading",
+            seed: seed
+        }
+    }
+
+    _hydrate = (context) => {
+        this.problemIndex = { problems: problemPool };
         let chosenProblem = null;
         const problemIDs = [];
-        // Add each Q Matrix skill model attribute to each step
         for (const problem of this.problemIndex.problems) {
             problemIDs.push(problem.id)
             if (problem.id === this.props.problemID) {
@@ -39,22 +48,23 @@ class DebugPlatform extends React.Component {
                 step.knowledgeComponents = context.skillModel[step.id];
             }
         }
-        context.problemID = this.props.problemID
         context.problemIDs = problemIDs.sort(this.__compareProblemID)
-
-        this.state = {
-            currProblem: chosenProblem,
-            status: "learning",
-            seed: seed
-        }
-
+        this.setState({ currProblem: chosenProblem, status: "learning" })
     }
 
     componentDidMount() {
         if (this.context.needRefresh) {
             this.context.needRefresh = false;
             window.location.reload();
+            return;
         }
+        loadProblemPool().then((pool) => {
+            problemPool = pool;
+            this._hydrate(this.context);
+        }).catch((err) => {
+            console.error(err);
+            this.setState({ status: "learning", currProblem: null });
+        });
         this.onComponentUpdate(null, null, null)
     }
 
@@ -220,7 +230,9 @@ class DebugPlatform extends React.Component {
 
                     </Toolbar>
                 </AppBar>
-                {this.state.currProblem
+                {this.state.status === "loading"
+                    ? <Box width={'100%'} textAlign={'center'} pt={4} pb={4}><Typography variant={'h3'}>Loading…</Typography></Box>
+                    : this.state.currProblem
                     ? <ProblemWrapper problem={this.state.currProblem} problemComplete={this.problemComplete}
                                lesson={this.lesson}
                                seed={this.state.seed}/>

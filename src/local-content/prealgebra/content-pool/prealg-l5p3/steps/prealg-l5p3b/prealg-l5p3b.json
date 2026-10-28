@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l5p3b",
+  "stepAnswer": [
+    "$$70$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "What is $$200\\%$$ of 35?",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$70$$"
+}

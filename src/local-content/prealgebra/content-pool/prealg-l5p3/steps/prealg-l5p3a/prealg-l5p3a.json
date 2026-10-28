@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l5p3a",
+  "stepAnswer": [
+    "$$25$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "What percent of 40 is 10?",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$25$$"
+}

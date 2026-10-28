@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l9p2b",
+  "stepAnswer": [
+    "$$36$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "A square has side length 9. What is its perimeter?",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$36$$"
+}

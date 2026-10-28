@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l7p4b",
+  "stepAnswer": [
+    "$$5$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "Solve $$5(y - 1) = 20$$.",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$5$$"
+}

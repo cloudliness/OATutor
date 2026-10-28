@@ -1,0 +1,63 @@
+[
+  {
+    "id": "prealg-l4p4a-h1",
+    "type": "scaffold",
+    "title": "Whole-number product",
+    "text": "Multiply $$24 \\times 15$$ first. You can compute $$24 \\times 10 + 24 \\times 5$$. A common mistake is to add the decimal points' positions instead of counting places. What is $$24 \\times 10$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$240$$"
+    ]
+  },
+  {
+    "id": "prealg-l4p4a-h2",
+    "type": "scaffold",
+    "title": "Add the other partial product",
+    "text": "$$24 \\times 5 = 120$$. What is $$240 + 120$$?",
+    "dependencies": [
+      "prealg-l4p4a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$360$$"
+    ]
+  },
+  {
+    "id": "prealg-l4p4a-h3",
+    "type": "scaffold",
+    "title": "Place the decimal point",
+    "text": "$$2.4$$ has one decimal place and $$1.5$$ has one, so the product has two. 360 with two decimal places is 3.60, which equals 3.6. What is that value as a decimal?",
+    "dependencies": [
+      "prealg-l4p4a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$3.6$$"
+    ]
+  },
+  {
+    "id": "prealg-l4p4a-h4",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$2.4 \\times 1.5 = 3.6$$. The digit product is 360, and two decimal places make 3.60, which equals 3.6. Common mistake: answering $$36$$ or $$3.60$$ written as if it were 36 tenths. General rule: multiply the digits, then insert the decimal point so the product has as many decimal places as the factors combined.",
+    "dependencies": [
+      "prealg-l4p4a-h3"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l9p3a-h1",
+    "type": "scaffold",
+    "title": "How many inches are in one foot?",
+    "text": "The conversion rate is 12 inches in 1 foot. You multiply when the unit you want is the smaller one. A common mistake is to divide by 12, which converts inches into feet. How many inches are in 1 foot?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$12$$"
+    ]
+  },
+  {
+    "id": "prealg-l9p3a-h2",
+    "type": "scaffold",
+    "title": "Multiply by the number of feet",
+    "text": "What is $$3 \\times 12$$?",
+    "dependencies": [
+      "prealg-l9p3a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$36$$"
+    ]
+  },
+  {
+    "id": "prealg-l9p3a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$3 \\times 12 = 36$$ inches. Common mistake: answering $$\\frac{3}{12} = 0.25$$. General rule: to convert to a smaller unit, multiply by how many of the smaller unit fit in one of the larger unit.",
+    "dependencies": [
+      "prealg-l9p3a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l8p2a-h1",
+    "type": "scaffold",
+    "title": "Why isn't the answer 0?",
+    "text": "A zero exponent does not mean the base is multiplied by zero. $$\\frac{7^{3}}{7^{3}} = 7^{3-3} = 7^{0}$$, and any nonzero number divided by itself is 1. A common mistake is to answer 0. What exponent is left when you compute $$3 - 3$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$0$$"
+    ]
+  },
+  {
+    "id": "prealg-l8p2a-h2",
+    "type": "scaffold",
+    "title": "What value matches that quotient?",
+    "text": "$$7^{3} \\div 7^{3}$$ equals 1, and that quotient is $$7^{0}$$. What is $$343 \\div 343$$?",
+    "dependencies": [
+      "prealg-l8p2a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$1$$"
+    ]
+  },
+  {
+    "id": "prealg-l8p2a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$7^{0} = 1$$. Common mistake: answering 0. General rule: any nonzero number raised to the power 0 equals 1. The reason is that subtracting exponents in a quotient of equal powers leaves exponent 0 and value 1.",
+    "dependencies": [
+      "prealg-l8p2a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

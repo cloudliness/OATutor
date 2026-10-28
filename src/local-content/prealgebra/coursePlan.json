@@ -1,0 +1,135 @@
+{
+  "courseName": "Pre-Algebra",
+  "office_hours": false,
+  "language": "en",
+  "courseOER": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+  "courseLicense": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+  "lessons": [
+    {
+      "id": "prealg-lesson-1",
+      "name": "1. Whole Numbers and Order of Operations",
+      "topics": "",
+      "allowRecycle": true,
+      "guidedHints": true,
+      "allowBottomHint": false,
+      "allowDynamicHint": false,
+      "allowTTS": false,
+      "learningObjectives": {
+        "prealg_order_of_operations": 0.85,
+        "prealg_whole_number_operations": 0.85
+      }
+    },
+    {
+      "id": "prealg-lesson-2",
+      "name": "2. Integers and Negative Numbers",
+      "topics": "",
+      "allowRecycle": true,
+      "guidedHints": true,
+      "allowBottomHint": false,
+      "allowDynamicHint": false,
+      "allowTTS": false,
+      "learningObjectives": {
+        "prealg_integer_add_sub": 0.85,
+        "prealg_integer_mul_div": 0.85
+      }
+    },
+    {
+      "id": "prealg-lesson-3",
+      "name": "3. Fractions",
+      "topics": "",
+      "allowRecycle": true,
+      "guidedHints": true,
+      "allowBottomHint": false,
+      "allowDynamicHint": false,
+      "allowTTS": false,
+      "learningObjectives": {
+        "prealg_simplify_multiply_fractions": 0.85,
+        "prealg_add_subtract_fractions": 0.85
+      }
+    },
+    {
+      "id": "prealg-lesson-4",
+      "name": "4. Decimals",
+      "topics": "",
+      "allowRecycle": true,
+      "guidedHints": true,
+      "allowBottomHint": false,
+      "allowDynamicHint": false,
+      "allowTTS": false,
+      "learningObjectives": {
+        "prealg_decimal_place_value": 0.85,
+        "prealg_decimal_operations": 0.85
+      }
+    },
+    {
+      "id": "prealg-lesson-5",
+      "name": "5. Percents",
+      "topics": "",
+      "allowRecycle": true,
+      "guidedHints": true,
+      "allowBottomHint": false,
+      "allowDynamicHint": false,
+      "allowTTS": false,
+      "learningObjectives": {
+        "prealg_percent_conversions": 0.85,
+        "prealg_percent_of_number": 0.85
+      }
+    },
+    {
+      "id": "prealg-lesson-6",
+      "name": "6. Ratios, Rates, and Proportions",
+      "topics": "",
+      "allowRecycle": true,
+      "guidedHints": true,
+      "allowBottomHint": false,
+      "allowDynamicHint": false,
+      "allowTTS": false,
+      "learningObjectives": {
+        "prealg_ratios_rates": 0.85,
+        "prealg_proportions": 0.85
+      }
+    },
+    {
+      "id": "prealg-lesson-7",
+      "name": "7. Variables and Simple Equations",
+      "topics": "",
+      "allowRecycle": true,
+      "guidedHints": true,
+      "allowBottomHint": false,
+      "allowDynamicHint": false,
+      "allowTTS": false,
+      "learningObjectives": {
+        "prealg_one_step_equations": 0.85,
+        "prealg_two_step_equations": 0.85
+      }
+    },
+    {
+      "id": "prealg-lesson-8",
+      "name": "8. Exponents and Square Roots",
+      "topics": "",
+      "allowRecycle": true,
+      "guidedHints": true,
+      "allowBottomHint": false,
+      "allowDynamicHint": false,
+      "allowTTS": false,
+      "learningObjectives": {
+        "prealg_exponents": 0.85,
+        "prealg_square_roots": 0.85
+      }
+    },
+    {
+      "id": "prealg-lesson-9",
+      "name": "9. Geometry and Measurement",
+      "topics": "",
+      "allowRecycle": true,
+      "guidedHints": true,
+      "allowBottomHint": false,
+      "allowDynamicHint": false,
+      "allowTTS": false,
+      "learningObjectives": {
+        "prealg_perimeter_area": 0.85,
+        "prealg_measurement": 0.85
+      }
+    }
+  ]
+}

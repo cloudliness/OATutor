@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l1p3a",
+  "stepAnswer": [
+    "$$12$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "$$18 \\div 3 \\times 2$$",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$12$$"
+}

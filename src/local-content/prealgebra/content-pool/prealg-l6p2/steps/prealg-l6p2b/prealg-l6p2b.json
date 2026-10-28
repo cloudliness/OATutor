@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l6p2b",
+  "stepAnswer": [
+    "$$12$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "Solve $$\\frac{3}{5} = \\frac{x}{20}$$ for $$x$$.",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$12$$"
+}

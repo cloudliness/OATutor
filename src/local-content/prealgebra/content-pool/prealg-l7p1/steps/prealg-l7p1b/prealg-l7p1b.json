@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l7p1b",
+  "stepAnswer": [
+    "$$4$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "Solve $$n - 7 = -3$$.",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$4$$"
+}

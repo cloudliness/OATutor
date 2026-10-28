@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l5p2b-h1",
+    "type": "scaffold",
+    "title": "Which way does the decimal point move?",
+    "text": "Percent is 'out of 100,' so multiply the decimal by 100. That moves the decimal point two places to the right. A common mistake is to move it one place, or to move it left as if you were turning a percent into a decimal. How many places does the point move?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$2$$"
+    ]
+  },
+  {
+    "id": "prealg-l5p2b-h2",
+    "type": "scaffold",
+    "title": "Apply that shift to 0.08",
+    "text": "Moving the decimal point in $$0.08$$ two places to the right produces a whole number of percent. What is that whole number?",
+    "dependencies": [
+      "prealg-l5p2b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$8$$"
+    ]
+  },
+  {
+    "id": "prealg-l5p2b-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$0.08 = 8\\%$$. Common mistake: answering $$80\\%$$ or $$0.08\\%$$. General rule: multiply by 100 to convert a decimal to a percent, and divide by 100 to convert a percent to a decimal.",
+    "dependencies": [
+      "prealg-l5p2b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

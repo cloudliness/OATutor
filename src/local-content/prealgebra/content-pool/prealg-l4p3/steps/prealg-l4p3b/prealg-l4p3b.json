@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l4p3b",
+  "stepAnswer": [
+    "$$4.27$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "Round $$4.268$$ to the nearest hundredth.",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$4.27$$"
+}

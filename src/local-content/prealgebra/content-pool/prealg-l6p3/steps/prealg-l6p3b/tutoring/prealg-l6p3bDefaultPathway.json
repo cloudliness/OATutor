@@ -1,0 +1,50 @@
+[
+  {
+    "id": "prealg-l6p3b-h1",
+    "type": "scaffold",
+    "title": "Unit price is a quotient",
+    "text": "Dollars per notebook puts notebooks in the denominator. A common mistake is to divide 6 by 18, which answers 'notebooks per dollar' instead. Which quotient is the price of one notebook?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "MultipleChoice",
+    "answerType": "string",
+    "hintAnswer": [
+      "$$18 \\div 6$$"
+    ],
+    "choices": [
+      "$$18 \\div 6$$",
+      "$$6 \\div 18$$"
+    ]
+  },
+  {
+    "id": "prealg-l6p3b-h2",
+    "type": "scaffold",
+    "title": "Compute the quotient",
+    "text": "What is $$18 \\div 6$$?",
+    "dependencies": [
+      "prealg-l6p3b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$3$$"
+    ]
+  },
+  {
+    "id": "prealg-l6p3b-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$18 \\div 6 = 3$$ dollars per notebook. Common mistake: answering $$\\frac{1}{3}$$, which is notebooks per dollar. General rule: put the quantity you want 'one' of in the denominator of the rate.",
+    "dependencies": [
+      "prealg-l6p3b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

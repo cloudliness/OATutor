@@ -1,0 +1,63 @@
+[
+  {
+    "id": "prealg-l1p3b-h1",
+    "type": "scaffold",
+    "title": "How many products are there?",
+    "text": "Each multiplication is its own higher-priority piece. A common mistake is to add $$8 + 6$$ because they are in the middle. What is $$7 \\times 8$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$56$$"
+    ]
+  },
+  {
+    "id": "prealg-l1p3b-h2",
+    "type": "scaffold",
+    "title": "Second product",
+    "text": "The other product does not use the 56 you just found. What is $$6 \\times 5$$?",
+    "dependencies": [
+      "prealg-l1p3b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$30$$"
+    ]
+  },
+  {
+    "id": "prealg-l1p3b-h3",
+    "type": "scaffold",
+    "title": "Add the products",
+    "text": "Now add those two results. What is $$56 + 30$$?",
+    "dependencies": [
+      "prealg-l1p3b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$86$$"
+    ]
+  },
+  {
+    "id": "prealg-l1p3b-h4",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$7 \\times 8 + 6 \\times 5 = 56 + 30 = 86$$. Common mistake: adding $$8 + 6$$ first. General rule: compute each product, then add the products.",
+    "dependencies": [
+      "prealg-l1p3b-h3"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

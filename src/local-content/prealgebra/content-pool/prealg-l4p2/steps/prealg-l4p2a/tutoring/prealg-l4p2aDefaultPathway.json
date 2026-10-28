@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l4p2a-h1",
+    "type": "scaffold",
+    "title": "Rewrite 6.4 with hundredths",
+    "text": "$$2.18$$ has hundredths, so rewrite $$6.4$$ as $$6.40$$ before you subtract. A common mistake is to treat 6.4 as 6.04, or to subtract 18 from 4 and ignore the ones. In hundredths, $$6.40$$ is 640 hundredths and $$2.18$$ is 218 hundredths. What is $$640 - 218$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$422$$"
+    ]
+  },
+  {
+    "id": "prealg-l4p2a-h2",
+    "type": "scaffold",
+    "title": "Turn hundredths back into a decimal",
+    "text": "422 hundredths means 4 ones and 22 hundredths, because 100 hundredths make 1. What decimal equals 422 hundredths?",
+    "dependencies": [
+      "prealg-l4p2a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$4.22$$"
+    ]
+  },
+  {
+    "id": "prealg-l4p2a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$6.40 - 2.18 = 4.22$$. Check: $$4.22 + 2.18 = 6.40$$. Common mistake: answering $$4.38$$ by subtracting 4 minus 18 incorrectly and borrowing the wrong place. General rule: give both numbers the same number of decimal places, then subtract place by place, borrowing from the place to the left when you need to.",
+    "dependencies": [
+      "prealg-l4p2a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

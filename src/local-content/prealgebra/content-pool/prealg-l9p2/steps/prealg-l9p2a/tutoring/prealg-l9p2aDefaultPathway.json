@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l9p2a-h1",
+    "type": "scaffold",
+    "title": "Start with the related rectangle",
+    "text": "A rectangle with base 10 and height 6 has area $$10 \\times 6$$. The triangle is half of that, because the diagonal cuts the rectangle into two equal areas. A common mistake is to answer $$10 \\times 6$$ and forget the $$\\frac{1}{2}$$, or to add $$\\frac{1}{2}$$ instead of multiplying. What is $$10 \\times 6$$?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$60$$"
+    ]
+  },
+  {
+    "id": "prealg-l9p2a-h2",
+    "type": "scaffold",
+    "title": "Take half",
+    "text": "What is half of 60?",
+    "dependencies": [
+      "prealg-l9p2a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$30$$"
+    ]
+  },
+  {
+    "id": "prealg-l9p2a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "Area $$= \\frac{1}{2} \\times 10 \\times 6 = 30$$. Common mistake: answering 60, or $$10 + 6 = 16$$. General rule: triangle area is $$\\frac{1}{2} \\times \\text{base} \\times \\text{height}$$. The height is perpendicular to the base, not the slanted side.",
+    "dependencies": [
+      "prealg-l9p2a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

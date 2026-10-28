@@ -1,0 +1,50 @@
+[
+  {
+    "id": "prealg-l2p2b-h1",
+    "type": "scaffold",
+    "title": "Same signs or opposite signs?",
+    "text": "Both the dividend and the divisor are negative, so the signs match. A common mistake is to think every expression that contains a minus sign has a negative answer. What sign does $$-36 \\div (-9)$$ have?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "MultipleChoice",
+    "answerType": "string",
+    "hintAnswer": [
+      "Positive"
+    ],
+    "choices": [
+      "Positive",
+      "Negative"
+    ]
+  },
+  {
+    "id": "prealg-l2p2b-h2",
+    "type": "scaffold",
+    "title": "Divide the absolute values",
+    "text": "What is $$36 \\div 9$$?",
+    "dependencies": [
+      "prealg-l2p2b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$4$$"
+    ]
+  },
+  {
+    "id": "prealg-l2p2b-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$-36 \\div (-9) = 4$$. Check: $$-9 \\times 4 = -36$$. Common mistake: answering $$-4$$. General rule: the sign rule for division is the same as for multiplication. Two negatives make a positive.",
+    "dependencies": [
+      "prealg-l2p2b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l6p1b",
+  "stepAnswer": [
+    "$$40$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "A car travels 120 miles in 3 hours at a steady speed. How many miles per hour is that?",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$40$$"
+}

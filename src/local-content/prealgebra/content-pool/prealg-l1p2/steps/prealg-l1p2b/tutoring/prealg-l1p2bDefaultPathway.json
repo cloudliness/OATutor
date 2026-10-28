@@ -1,0 +1,63 @@
+[
+  {
+    "id": "prealg-l1p2b-h1",
+    "type": "scaffold",
+    "title": "Where do you start?",
+    "text": "Parentheses outrank multiplication, and multiplication outranks subtraction. A common mistake is to subtract $$100 - 4$$ first. What is $$3 + 5$$, inside the parentheses?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$8$$"
+    ]
+  },
+  {
+    "id": "prealg-l1p2b-h2",
+    "type": "scaffold",
+    "title": "Multiply by the factor outside",
+    "text": "The 4 is a factor on the whole group, so it multiplies the 8 you just found. What is $$4 \\times 8$$?",
+    "dependencies": [
+      "prealg-l1p2b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$32$$"
+    ]
+  },
+  {
+    "id": "prealg-l1p2b-h3",
+    "type": "scaffold",
+    "title": "Subtract from 100",
+    "text": "The expression is now $$100 - 32$$. Subtraction is last. What is $$100 - 32$$?",
+    "dependencies": [
+      "prealg-l1p2b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$68$$"
+    ]
+  },
+  {
+    "id": "prealg-l1p2b-h4",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$100 - 4 \\times (3 + 5) = 100 - 4 \\times 8 = 100 - 32 = 68$$. Common mistake: subtracting before multiplying, or multiplying only the 3 by 4. General rule: parentheses, then multiplication, then subtraction.",
+    "dependencies": [
+      "prealg-l1p2b-h3"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

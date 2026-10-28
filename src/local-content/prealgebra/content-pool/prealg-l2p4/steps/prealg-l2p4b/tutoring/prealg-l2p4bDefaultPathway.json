@@ -1,0 +1,50 @@
+[
+  {
+    "id": "prealg-l2p4b-h1",
+    "type": "scaffold",
+    "title": "What sign does the product have?",
+    "text": "Both factors are negative, so the signs match. A common mistake is to keep a minus sign in the product. What sign should $$-4 \\times (-8)$$ have?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "MultipleChoice",
+    "answerType": "string",
+    "hintAnswer": [
+      "Positive"
+    ],
+    "choices": [
+      "Positive",
+      "Negative"
+    ]
+  },
+  {
+    "id": "prealg-l2p4b-h2",
+    "type": "scaffold",
+    "title": "Multiply the absolute values",
+    "text": "What is $$4 \\times 8$$?",
+    "dependencies": [
+      "prealg-l2p4b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$32$$"
+    ]
+  },
+  {
+    "id": "prealg-l2p4b-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$-4 \\times (-8) = 32$$. Common mistake: answering $$-32$$. General rule: a negative times a negative is positive. You can check by noting that multiplying by $$-1$$ flips the sign, and flipping twice returns you to positive.",
+    "dependencies": [
+      "prealg-l2p4b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

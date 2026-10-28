@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l4p3b-h1",
+    "type": "scaffold",
+    "title": "Which digit decides the rounding?",
+    "text": "Hundredths is the second digit after the decimal point. In $$4.268$$ that digit is 6, and the next digit (thousandths) decides whether 6 stays or goes up. A common mistake is to look at the tenths digit, or to round 6 using the 4 in front. What is the thousandths digit?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$8$$"
+    ]
+  },
+  {
+    "id": "prealg-l4p3b-h2",
+    "type": "scaffold",
+    "title": "Does 6 go up?",
+    "text": "The deciding digit is 5 or more, so the hundredths digit increases by 1. What is $$6 + 1$$?",
+    "dependencies": [
+      "prealg-l4p3b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$7$$"
+    ]
+  },
+  {
+    "id": "prealg-l4p3b-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$4.268$$ to the nearest hundredth is $$4.27$$. The thousandths digit 8 tells you to round the 6 up. Common mistake: answering $$4.26$$ (truncating) or $$4.3$$ (rounding to tenths). General rule: find the place you are keeping, look one place to the right, and round up when that digit is 5, 6, 7, 8, or 9.",
+    "dependencies": [
+      "prealg-l4p3b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

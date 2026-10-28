@@ -404,7 +404,7 @@ const TableOfContents = ({
                     >
                       <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
                         <SublessonCompletionRing mastery={sublessonMastery} />
-                        <div>{lesson.name} {lesson.topics}</div>
+                        <div>{[lesson.name, lesson.topics].filter(Boolean).join(" ")}</div>
                       </div>
                     </Box>
                   );

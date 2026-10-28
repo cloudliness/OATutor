@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l3p1b-h1",
+    "type": "scaffold",
+    "title": "Do you need a common denominator?",
+    "text": "Multiplication does not need a common denominator. Multiply straight across, then simplify. You can also cancel a common factor before you multiply, which keeps the numbers smaller. A common mistake is to add the denominators as if this were an addition problem. After canceling a factor of 2 from 2 and 8, what numerator is left from the first fraction?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$1$$"
+    ]
+  },
+  {
+    "id": "prealg-l3p1b-h2",
+    "type": "scaffold",
+    "title": "Cancel a factor of 3 as well",
+    "text": "3 and 9 share a factor of 3. Canceling it leaves 1 in the first denominator and 3 in the second numerator. The product is then $$\\frac{1}{1} \\times \\frac{3}{4}$$. What is that product, as a fraction in lowest terms? Use the value of $$\\frac{3}{4}$$.",
+    "dependencies": [
+      "prealg-l3p1b-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$\\frac{3}{4}$$"
+    ]
+  },
+  {
+    "id": "prealg-l3p1b-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$\\frac{2}{3} \\times \\frac{9}{8} = \\frac{2 \\times 9}{3 \\times 8} = \\frac{18}{24} = \\frac{3}{4}$$. Canceling first: $$\\frac{1}{1} \\times \\frac{3}{4} = \\frac{3}{4}$$. Common mistake: adding denominators, or forgetting to simplify $$\\frac{18}{24}$$. General rule: to multiply fractions, multiply numerators and multiply denominators, then simplify. Canceling a common factor before multiplying is the same operation, done earlier.",
+    "dependencies": [
+      "prealg-l3p1b-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

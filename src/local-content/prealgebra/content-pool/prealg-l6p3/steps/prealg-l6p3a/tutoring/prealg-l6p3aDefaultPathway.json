@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l6p3a-h1",
+    "type": "scaffold",
+    "title": "Write the rate as flour per cookie, or scale the batch",
+    "text": "The ratio $$\\frac{2}{12}$$ must equal $$\\frac{x}{30}$$. 30 is $$12 \\times 2.5$$, and $$2.5 = \\frac{5}{2}$$. A common mistake is to add 18 cookies and also add 18 cups. How many times larger is 30 than 12? Enter that factor as a decimal.",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$2.5$$"
+    ]
+  },
+  {
+    "id": "prealg-l6p3a-h2",
+    "type": "scaffold",
+    "title": "Multiply the flour by the same factor",
+    "text": "What is $$2 \\times 2.5$$?",
+    "dependencies": [
+      "prealg-l6p3a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$5$$"
+    ]
+  },
+  {
+    "id": "prealg-l6p3a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$\\frac{2}{12} = \\frac{x}{30}$$, so $$x = 2 \\times \\frac{30}{12} = 2 \\times 2.5 = 5$$ cups. Common mistake: answering 20 cups by adding the extra cookies to the flour. General rule: scale both quantities in a rate by the same factor.",
+    "dependencies": [
+      "prealg-l6p3a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

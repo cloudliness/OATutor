@@ -1,0 +1,46 @@
+[
+  {
+    "id": "prealg-l5p3a-h1",
+    "type": "scaffold",
+    "title": "Which number is the whole?",
+    "text": "The phrase 'percent of 40' means 40 is the whole, the denominator. 10 is the part. A common mistake is to divide 40 by 10 and call that a percent. What is $$\\frac{10}{40}$$ in lowest terms, as a numerator over 4? Enter the numerator of the simplified fraction $$\\frac{1}{4}$$.",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$1$$"
+    ]
+  },
+  {
+    "id": "prealg-l5p3a-h2",
+    "type": "scaffold",
+    "title": "Convert one fourth to a percent",
+    "text": "$$\\frac{1}{4} \\times 100 = 25$$. So 10 is 25% of 40. What is $$100 \\div 4$$?",
+    "dependencies": [
+      "prealg-l5p3a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$25$$"
+    ]
+  },
+  {
+    "id": "prealg-l5p3a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$\\frac{10}{40} = \\frac{1}{4} = 25\\%$$. Common mistake: answering $$4\\%$$ or $$400\\%$$ by inverting the fraction. General rule: $$\\text{percent} = \\frac{\\text{part}}{\\text{whole}} \\times 100$$.",
+    "dependencies": [
+      "prealg-l5p3a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

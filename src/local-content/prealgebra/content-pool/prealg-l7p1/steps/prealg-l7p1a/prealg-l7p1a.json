@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l7p1a",
+  "stepAnswer": [
+    "$$5$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "Solve $$x + 9 = 14$$.",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$5$$"
+}

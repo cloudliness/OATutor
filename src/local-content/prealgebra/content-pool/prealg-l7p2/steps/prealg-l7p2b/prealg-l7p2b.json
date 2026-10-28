@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l7p2b",
+  "stepAnswer": [
+    "$$30$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "Solve $$\\frac{m}{5} = 6$$.",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$30$$"
+}

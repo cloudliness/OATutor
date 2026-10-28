@@ -1,0 +1,51 @@
+[
+  {
+    "id": "prealg-l8p3a-h1",
+    "type": "scaffold",
+    "title": "What question is a square root asking?",
+    "text": "$$\\sqrt{81}$$ asks for the nonnegative number that multiplies by itself to make 81. A common mistake is to divide by 2 and answer 40.5. Which of these squares equals 81?",
+    "dependencies": [],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "MultipleChoice",
+    "answerType": "string",
+    "hintAnswer": [
+      "$$9^{2}$$"
+    ],
+    "choices": [
+      "$$8^{2}$$",
+      "$$9^{2}$$",
+      "$$10^{2}$$"
+    ]
+  },
+  {
+    "id": "prealg-l8p3a-h2",
+    "type": "scaffold",
+    "title": "Confirm by multiplying",
+    "text": "If 9 is the root, its square must be 81. What is $$9 \\times 9$$?",
+    "dependencies": [
+      "prealg-l8p3a-h1"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+    "problemType": "TextBox",
+    "answerType": "arithmetic",
+    "hintAnswer": [
+      "$$81$$"
+    ]
+  },
+  {
+    "id": "prealg-l8p3a-h3",
+    "type": "hint",
+    "title": "Worked solution",
+    "text": "$$\\sqrt{81} = 9$$, because $$9 \\times 9 = 81$$. Common mistake: answering $$40.5$$, or $$-9$$ when the radical symbol asks for the nonnegative root. General rule: $$\\sqrt{a^{2}} = |a|$$. Check a square root by squaring your answer.",
+    "dependencies": [
+      "prealg-l8p3a-h2"
+    ],
+    "variabilization": {},
+    "oer": "https://openstax.org/details/books/prealgebra-2e <OpenStax Prealgebra 2e; original exercises, CC BY 4.0>",
+    "license": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>"
+  }
+]

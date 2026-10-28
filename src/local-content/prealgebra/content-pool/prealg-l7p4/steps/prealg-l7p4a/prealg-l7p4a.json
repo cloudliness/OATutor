@@ -1,0 +1,12 @@
+{
+  "id": "prealg-l7p4a",
+  "stepAnswer": [
+    "$$12$$"
+  ],
+  "problemType": "TextBox",
+  "stepTitle": "Solve $$\\frac{x}{3} + 2 = 6$$.",
+  "stepBody": "Enter the value. Fractions should be in lowest terms.",
+  "answerType": "arithmetic",
+  "variabilization": {},
+  "answerLatex": "$$12$$"
+}

@@ -16,10 +16,11 @@ in the browser (IndexedDB via localForage, plus the course-unlock flag in
 | Output directory | `build` |
 | Node.js version | 20.x or 22.x is fine. The build script sets `NODE_OPTIONS=--openssl-legacy-provider` so webpack 4 still runs on current Node. |
 
-`vercel.json` already sets the framework, install command, build command,
-output directory, and a rewrite so any path serves `index.html`. The app
-uses hash routes (`/#/courses/0`), so refreshes work even without that
-rewrite. The rewrite covers a direct visit to a non-hash path.
+`vercel.json` sets the framework, install command, build command, and
+output directory. The rewrite sends unknown paths to `index.html` and skips
+files that already exist as static assets: `service-worker.js`,
+`manifest.json`, `icons/`, `static/`, and other files with an asset
+extension. The app uses hash routes (`/#/courses/0`).
 
 ## Environment variables
 
@@ -52,11 +53,16 @@ Figures from the content repo are copied into the build as static images.
 
 ## Phone install
 
-`public/manifest.json` plus `public/icons/icon-192.png` and
-`public/icons/icon-512.png` make the site installable. On iOS, use Share →
-Add to Home Screen. A service worker is registered in production so the app
-shell can open again after the first visit. The lesson JSON and figures are
-large, so a fully offline library is not cached.
+The site is an installable PWA. `public/manifest.json` has `id`, `start_url`,
+`display: standalone`, and 192 and 512 icons (plus a maskable 512).
+`public/service-worker.js` is copied into the build and registered in
+production. It caches the app shell (HTML, JS, CSS, icons) and does not
+precache lesson JSON or textbook figures. Vercel serves the worker as
+JavaScript with `Cache-Control: no-cache`.
+
+On Android Chrome, use the menu’s Install app or Add to Home screen. On
+iOS, use Share → Add to Home Screen. A full offline copy of every lesson is
+not stored.
 
 ## Course unlock
 
